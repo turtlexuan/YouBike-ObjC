@@ -10,4 +10,9 @@
 
 @interface CommentTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *userImageView;
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *commentLabel;
+
 @end

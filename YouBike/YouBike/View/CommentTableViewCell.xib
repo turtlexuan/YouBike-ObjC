@@ -74,10 +74,13 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="commentLabel" destination="KO7-AS-I4F" id="tCj-Yk-ubz"/>
                 <outlet property="commentText" destination="KO7-AS-I4F" id="bTf-yB-dQm"/>
                 <outlet property="date" destination="SnU-Ef-MIp" id="kMD-Jl-6Dk"/>
-                <outlet property="userImageView" destination="WuU-7Q-q6m" id="9nB-Y5-qFy"/>
+                <outlet property="dateLabel" destination="SnU-Ef-MIp" id="93X-KY-gkJ"/>
+                <outlet property="userImageView" destination="WuU-7Q-q6m" id="ybt-vO-TJj"/>
                 <outlet property="userName" destination="v9b-GJ-maD" id="tYw-jd-fSl"/>
+                <outlet property="usernameLabel" destination="v9b-GJ-maD" id="J39-hk-S33"/>
             </connections>
             <point key="canvasLocation" x="50" y="149.5"/>
         </tableViewCell>

@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface StationTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bikesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *remainLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numberLabel;
+@property (weak, nonatomic) IBOutlet UIButton *mapButton;
 
 @end

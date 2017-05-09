@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface StationCollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UILabel *numberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
 @end
