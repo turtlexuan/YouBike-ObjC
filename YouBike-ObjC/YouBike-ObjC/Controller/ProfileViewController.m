@@ -9,6 +9,12 @@
 #import "ProfileViewController.h"
 
 @interface ProfileViewController ()
+@property (weak, nonatomic) IBOutlet UIView *backgroundView;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (weak, nonatomic) IBOutlet UIView *gradientView;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (weak, nonatomic) IBOutlet UIView *homePageButtonView;
 
 @end
 
@@ -22,6 +28,9 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)homePageAction:(id)sender {
 }
 
 /*

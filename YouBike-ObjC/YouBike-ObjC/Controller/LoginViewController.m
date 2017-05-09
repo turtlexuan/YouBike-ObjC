@@ -9,6 +9,9 @@
 #import "LoginViewController.h"
 
 @interface LoginViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *logoLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
+@property (weak, nonatomic) IBOutlet UIView *loginView;
 
 @end
 
@@ -22,6 +25,9 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)loginAction:(id)sender {
 }
 
 /*

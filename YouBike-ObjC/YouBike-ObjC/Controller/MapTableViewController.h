@@ -1,5 +1,5 @@
 //
-//  MapViewController.h
+//  MapTableViewController.h
 //  YouBike-ObjC
 //
 //  Created by 劉仲軒 on 2017/5/9.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MapViewController : UIViewController
+@interface MapTableViewController : UITableViewController
 
 @end

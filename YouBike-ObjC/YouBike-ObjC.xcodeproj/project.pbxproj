@@ -16,7 +16,6 @@
 		205AE8161EC156BD00445A9F /* StoryboardiPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205AE8151EC156BD00445A9F /* StoryboardiPad.storyboard */; };
 		205AE8191EC1589500445A9F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE8181EC1589500445A9F /* LoginViewController.m */; };
 		205AE81C1EC158A700445A9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE81B1EC158A700445A9F /* ViewController.m */; };
-		205AE81F1EC158B900445A9F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE81E1EC158B900445A9F /* MapViewController.m */; };
 		205AE8301EC158F800445A9F /* ProfileNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE8211EC158F800445A9F /* ProfileNavigationController.m */; };
 		205AE8311EC158F800445A9F /* StationNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE8231EC158F800445A9F /* StationNavigationController.m */; };
 		205AE8321EC158F800445A9F /* MapNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE8251EC158F800445A9F /* MapNavigationController.m */; };
@@ -31,6 +30,7 @@
 		205AE8421EC15A3B00445A9F /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205AE8401EC15A3B00445A9F /* CommentTableViewCell.xib */; };
 		205AE8461EC15A5000445A9F /* StationCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE8441EC15A5000445A9F /* StationCollectionViewCell.m */; };
 		205AE8471EC15A5000445A9F /* StationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205AE8451EC15A5000445A9F /* StationCollectionViewCell.xib */; };
+		205AE84A1EC15D6400445A9F /* MapTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE8491EC15D6400445A9F /* MapTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,8 +48,6 @@
 		205AE8181EC1589500445A9F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		205AE81A1EC158A700445A9F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		205AE81B1EC158A700445A9F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		205AE81D1EC158B900445A9F /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		205AE81E1EC158B900445A9F /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		205AE8201EC158F800445A9F /* ProfileNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileNavigationController.h; sourceTree = "<group>"; };
 		205AE8211EC158F800445A9F /* ProfileNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileNavigationController.m; sourceTree = "<group>"; };
 		205AE8221EC158F800445A9F /* StationNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationNavigationController.h; sourceTree = "<group>"; };
@@ -75,6 +73,8 @@
 		205AE8431EC15A5000445A9F /* StationCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationCollectionViewCell.h; sourceTree = "<group>"; };
 		205AE8441EC15A5000445A9F /* StationCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationCollectionViewCell.m; sourceTree = "<group>"; };
 		205AE8451EC15A5000445A9F /* StationCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StationCollectionViewCell.xib; sourceTree = "<group>"; };
+		205AE8481EC15D6400445A9F /* MapTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTableViewController.h; sourceTree = "<group>"; };
+		205AE8491EC15D6400445A9F /* MapTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +137,6 @@
 				205AE8181EC1589500445A9F /* LoginViewController.m */,
 				205AE81A1EC158A700445A9F /* ViewController.h */,
 				205AE81B1EC158A700445A9F /* ViewController.m */,
-				205AE81D1EC158B900445A9F /* MapViewController.h */,
-				205AE81E1EC158B900445A9F /* MapViewController.m */,
 				205AE8201EC158F800445A9F /* ProfileNavigationController.h */,
 				205AE8211EC158F800445A9F /* ProfileNavigationController.m */,
 				205AE8221EC158F800445A9F /* StationNavigationController.h */,
@@ -155,6 +153,8 @@
 				205AE82D1EC158F800445A9F /* StationTableViewController.m */,
 				205AE82E1EC158F800445A9F /* ProfileViewController.h */,
 				205AE82F1EC158F800445A9F /* ProfileViewController.m */,
+				205AE8481EC15D6400445A9F /* MapTableViewController.h */,
+				205AE8491EC15D6400445A9F /* MapTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -260,10 +260,10 @@
 				205AE7C91EC14F7700445A9F /* YouBike_ObjC.xcdatamodeld in Sources */,
 				205AE8301EC158F800445A9F /* ProfileNavigationController.m in Sources */,
 				205AE8411EC15A3B00445A9F /* CommentTableViewCell.m in Sources */,
-				205AE81F1EC158B900445A9F /* MapViewController.m in Sources */,
 				205AE8351EC158F800445A9F /* StationCollectionViewController.m in Sources */,
 				205AE83C1EC15A2A00445A9F /* StationTableViewCell.m in Sources */,
 				205AE7BD1EC14F7700445A9F /* main.m in Sources */,
+				205AE84A1EC15D6400445A9F /* MapTableViewController.m in Sources */,
 				205AE8311EC158F800445A9F /* StationNavigationController.m in Sources */,
 				205AE8361EC158F800445A9F /* StationTableViewController.m in Sources */,
 				205AE8321EC158F800445A9F /* MapNavigationController.m in Sources */,
