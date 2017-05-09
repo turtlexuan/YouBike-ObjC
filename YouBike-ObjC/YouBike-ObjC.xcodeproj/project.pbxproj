@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		205AE7BD1EC14F7700445A9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE7BC1EC14F7700445A9F /* main.m */; };
+		205AE7C01EC14F7700445A9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE7BF1EC14F7700445A9F /* AppDelegate.m */; };
+		205AE7C31EC14F7700445A9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE7C21EC14F7700445A9F /* ViewController.m */; };
+		205AE7C61EC14F7700445A9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205AE7C41EC14F7700445A9F /* Main.storyboard */; };
+		205AE7C91EC14F7700445A9F /* YouBike_ObjC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 205AE7C71EC14F7700445A9F /* YouBike_ObjC.xcdatamodeld */; };
+		205AE7CB1EC14F7700445A9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 205AE7CA1EC14F7700445A9F /* Assets.xcassets */; };
+		205AE7CE1EC14F7700445A9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205AE7CC1EC14F7700445A9F /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		205AE7B81EC14F7700445A9F /* YouBike-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YouBike-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		205AE7BC1EC14F7700445A9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		205AE7BE1EC14F7700445A9F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		205AE7BF1EC14F7700445A9F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		205AE7C11EC14F7700445A9F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		205AE7C21EC14F7700445A9F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		205AE7C51EC14F7700445A9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		205AE7C81EC14F7700445A9F /* YouBike_ObjC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YouBike_ObjC.xcdatamodel; sourceTree = "<group>"; };
+		205AE7CA1EC14F7700445A9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		205AE7CD1EC14F7700445A9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		205AE7CF1EC14F7700445A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		205AE7B51EC14F7700445A9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		205AE7AF1EC14F7700445A9F = {
+			isa = PBXGroup;
+			children = (
+				205AE7BA1EC14F7700445A9F /* YouBike-ObjC */,
+				205AE7B91EC14F7700445A9F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		205AE7B91EC14F7700445A9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				205AE7B81EC14F7700445A9F /* YouBike-ObjC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		205AE7BA1EC14F7700445A9F /* YouBike-ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				205AE7BE1EC14F7700445A9F /* AppDelegate.h */,
+				205AE7BF1EC14F7700445A9F /* AppDelegate.m */,
+				205AE7C11EC14F7700445A9F /* ViewController.h */,
+				205AE7C21EC14F7700445A9F /* ViewController.m */,
+				205AE7C41EC14F7700445A9F /* Main.storyboard */,
+				205AE7CA1EC14F7700445A9F /* Assets.xcassets */,
+				205AE7CC1EC14F7700445A9F /* LaunchScreen.storyboard */,
+				205AE7CF1EC14F7700445A9F /* Info.plist */,
+				205AE7C71EC14F7700445A9F /* YouBike_ObjC.xcdatamodeld */,
+				205AE7BB1EC14F7700445A9F /* Supporting Files */,
+			);
+			path = "YouBike-ObjC";
+			sourceTree = "<group>";
+		};
+		205AE7BB1EC14F7700445A9F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				205AE7BC1EC14F7700445A9F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		205AE7B71EC14F7700445A9F /* YouBike-ObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 205AE7D21EC14F7700445A9F /* Build configuration list for PBXNativeTarget "YouBike-ObjC" */;
+			buildPhases = (
+				205AE7B41EC14F7700445A9F /* Sources */,
+				205AE7B51EC14F7700445A9F /* Frameworks */,
+				205AE7B61EC14F7700445A9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "YouBike-ObjC";
+			productName = "YouBike-ObjC";
+			productReference = 205AE7B81EC14F7700445A9F /* YouBike-ObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		205AE7B01EC14F7700445A9F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "劉仲軒";
+				TargetAttributes = {
+					205AE7B71EC14F7700445A9F = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = U9WVFKNWBQ;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 205AE7B31EC14F7700445A9F /* Build configuration list for PBXProject "YouBike-ObjC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 205AE7AF1EC14F7700445A9F;
+			productRefGroup = 205AE7B91EC14F7700445A9F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				205AE7B71EC14F7700445A9F /* YouBike-ObjC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		205AE7B61EC14F7700445A9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205AE7CE1EC14F7700445A9F /* LaunchScreen.storyboard in Resources */,
+				205AE7CB1EC14F7700445A9F /* Assets.xcassets in Resources */,
+				205AE7C61EC14F7700445A9F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		205AE7B41EC14F7700445A9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				205AE7C31EC14F7700445A9F /* ViewController.m in Sources */,
+				205AE7C01EC14F7700445A9F /* AppDelegate.m in Sources */,
+				205AE7C91EC14F7700445A9F /* YouBike_ObjC.xcdatamodeld in Sources */,
+				205AE7BD1EC14F7700445A9F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		205AE7C41EC14F7700445A9F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				205AE7C51EC14F7700445A9F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		205AE7CC1EC14F7700445A9F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				205AE7CD1EC14F7700445A9F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		205AE7D01EC14F7700445A9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		205AE7D11EC14F7700445A9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		205AE7D31EC14F7700445A9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U9WVFKNWBQ;
+				INFOPLIST_FILE = "YouBike-ObjC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.turtlexuan.YouBike-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		205AE7D41EC14F7700445A9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U9WVFKNWBQ;
+				INFOPLIST_FILE = "YouBike-ObjC/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.turtlexuan.YouBike-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		205AE7B31EC14F7700445A9F /* Build configuration list for PBXProject "YouBike-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				205AE7D01EC14F7700445A9F /* Debug */,
+				205AE7D11EC14F7700445A9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		205AE7D21EC14F7700445A9F /* Build configuration list for PBXNativeTarget "YouBike-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				205AE7D31EC14F7700445A9F /* Debug */,
+				205AE7D41EC14F7700445A9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		205AE7C71EC14F7700445A9F /* YouBike_ObjC.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				205AE7C81EC14F7700445A9F /* YouBike_ObjC.xcdatamodel */,
+			);
+			currentVersion = 205AE7C81EC14F7700445A9F /* YouBike_ObjC.xcdatamodel */;
+			path = YouBike_ObjC.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 205AE7B01EC14F7700445A9F /* Project object */;
+}
