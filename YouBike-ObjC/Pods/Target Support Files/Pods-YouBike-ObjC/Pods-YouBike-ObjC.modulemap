@@ -1,0 +1,6 @@
+framework module Pods_YouBike_ObjC {
+  umbrella header "Pods-YouBike-ObjC-umbrella.h"
+
+  export *
+  module * { export * }
+}
