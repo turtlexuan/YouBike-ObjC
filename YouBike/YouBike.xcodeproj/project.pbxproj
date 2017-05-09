@@ -31,6 +31,7 @@
 		2063C8BC1EC17CF20099F8FC /* StationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2063C8A91EC17CF20099F8FC /* StationCollectionViewCell.xib */; };
 		2063C8BD1EC17CF20099F8FC /* StationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C8AB1EC17CF20099F8FC /* StationTableViewCell.m */; };
 		2063C8BE1EC17CF20099F8FC /* StationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2063C8AC1EC17CF20099F8FC /* StationTableViewCell.xib */; };
+		46BA2248187336019736CD17 /* libPods-YouBike.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE72C6D237BC74E122C6544 /* libPods-YouBike.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,9 @@
 		2063C8AA1EC17CF20099F8FC /* StationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationTableViewCell.h; sourceTree = "<group>"; };
 		2063C8AB1EC17CF20099F8FC /* StationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationTableViewCell.m; sourceTree = "<group>"; };
 		2063C8AC1EC17CF20099F8FC /* StationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StationTableViewCell.xib; sourceTree = "<group>"; };
+		8F482465F4FB58E838E9C096 /* Pods-YouBike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouBike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YouBike/Pods-YouBike.debug.xcconfig"; sourceTree = "<group>"; };
+		9BA5818494562274EA31FFE6 /* Pods-YouBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouBike.release.xcconfig"; path = "Pods/Target Support Files/Pods-YouBike/Pods-YouBike.release.xcconfig"; sourceTree = "<group>"; };
+		ABE72C6D237BC74E122C6544 /* libPods-YouBike.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YouBike.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46BA2248187336019736CD17 /* libPods-YouBike.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +98,8 @@
 			children = (
 				2063C8701EC17CCA0099F8FC /* YouBike */,
 				2063C86F1EC17CCA0099F8FC /* Products */,
+				54C9A2F0857A18F60603C38A /* Pods */,
+				AC231255D4F8966201A39DBE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,6 +182,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		54C9A2F0857A18F60603C38A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F482465F4FB58E838E9C096 /* Pods-YouBike.debug.xcconfig */,
+				9BA5818494562274EA31FFE6 /* Pods-YouBike.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AC231255D4F8966201A39DBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABE72C6D237BC74E122C6544 /* libPods-YouBike.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,9 +206,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2063C8881EC17CCA0099F8FC /* Build configuration list for PBXNativeTarget "YouBike" */;
 			buildPhases = (
+				CA87A9E159306BE265ACCBD0 /* [CP] Check Pods Manifest.lock */,
 				2063C86A1EC17CCA0099F8FC /* Sources */,
 				2063C86B1EC17CCA0099F8FC /* Frameworks */,
 				2063C86C1EC17CCA0099F8FC /* Resources */,
+				72D0A172A98E689EFDFE08EA /* [CP] Embed Pods Frameworks */,
+				8E5ACAA2B6EF5AEC2F67E1A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,6 +272,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72D0A172A98E689EFDFE08EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YouBike/Pods-YouBike-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E5ACAA2B6EF5AEC2F67E1A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YouBike/Pods-YouBike-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA87A9E159306BE265ACCBD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2063C86A1EC17CCA0099F8FC /* Sources */ = {
@@ -387,6 +462,7 @@
 		};
 		2063C8891EC17CCA0099F8FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F482465F4FB58E838E9C096 /* Pods-YouBike.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U9WVFKNWBQ;
@@ -399,6 +475,7 @@
 		};
 		2063C88A1EC17CCA0099F8FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BA5818494562274EA31FFE6 /* Pods-YouBike.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U9WVFKNWBQ;
