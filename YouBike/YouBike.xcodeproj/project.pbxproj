@@ -505,6 +505,7 @@
 				2063C88A1EC17CCA0099F8FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
