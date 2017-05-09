@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AI6-5J-MWP">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Station Navigation Controller-->
+        <scene sceneID="z2U-8H-xBZ">
+            <objects>
+                <navigationController id="PgU-iD-Qss" customClass="StationNavigationController" customModule="youbike_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cap-nP-RxN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wfF-Fn-Hhv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="154" y="-462"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="2Jg-3Q-JgW">
+            <objects>
+                <splitViewController storyboardIdentifier="SplitViewController" id="AI6-5J-MWP" customClass="SplitViewController" customModule="youbike_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="PgU-iD-Qss" kind="relationship" relationship="masterViewController" id="s6Q-Of-xP3"/>
+                        <segue destination="pir-ql-6Kk" kind="relationship" relationship="detailViewController" id="Vxf-kz-jDN"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WU5-Pa-F0Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-798" y="-134"/>
+        </scene>
+        <!--Map Navigation Controller-->
+        <scene sceneID="mrj-ci-TlI">
+            <objects>
+                <navigationController storyboardIdentifier="MapNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="pir-ql-6Kk" customClass="MapNavigationController" customModule="youbike_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0mu-Iz-t4X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MpW-Pc-GME" kind="relationship" relationship="rootViewController" id="4Ax-55-16t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1wZ-Yb-fd8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152.80000000000001" y="192.95352323838082"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="SkB-FC-pgJ">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" hidesBottomBarWhenPushed="YES" id="MpW-Pc-GME" customClass="MapViewController" customModule="youbike_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zk6-68-Atn"/>
+                        <viewControllerLayoutGuide type="bottom" id="4tn-Sr-hM8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pis-nv-M2c">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qmg-hn-jXB">
+                                <rect key="frame" x="0.0" y="64" width="768" height="917"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Leh-jH-E2n">
+                                <rect key="frame" x="0.0" y="981" width="768" height="43"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NKS-RT-nHx">
+                                        <rect key="frame" x="16" y="8" width="736" height="29"/>
+                                        <segments>
+                                            <segment title="Standard"/>
+                                            <segment title="Satellite"/>
+                                            <segment title="Hybrid"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.98431372549999996" green="0.7725490196" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="segmentAction:" destination="MpW-Pc-GME" eventType="valueChanged" id="mLr-bf-PqT"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" red="0.23921568630000001" green="0.20392156859999999" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="NKS-RT-nHx" secondAttribute="trailing" constant="16" id="1Uo-fr-SLq"/>
+                                    <constraint firstItem="NKS-RT-nHx" firstAttribute="leading" secondItem="Leh-jH-E2n" secondAttribute="leading" constant="16" id="Er2-0T-X6X"/>
+                                    <constraint firstItem="NKS-RT-nHx" firstAttribute="centerY" secondItem="Leh-jH-E2n" secondAttribute="centerY" id="doT-QM-yrE"/>
+                                    <constraint firstAttribute="height" constant="43" id="k5r-GP-4HA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0t4-8V-NPB">
+                                <rect key="frame" x="0.0" y="64" width="768" height="120"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconMarker" translatesAutoresizingMaskIntoConstraints="NO" id="xkT-nw-L7r">
+                                        <rect key="frame" x="20" y="10" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="xkT-nw-L7r" secondAttribute="height" multiplier="1:1" id="WSd-Eo-hhc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="信義區 / 捷運市政府站(3號出口)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="anR-2N-CHC">
+                                        <rect key="frame" x="58" y="10" width="690" height="28"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="20"/>
+                                        <color key="textColor" red="0.62745098040000002" green="0.38431372549999998" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="台" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Wwv-CI-AVY">
+                                        <rect key="frame" x="728" y="76" width="20" height="28"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="20"/>
+                                        <color key="textColor" red="0.82745098039999998" green="0.58823529409999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="剩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7Db-bS-1I1">
+                                        <rect key="frame" x="547" y="76" width="20" height="28"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="20"/>
+                                        <color key="textColor" red="0.82745098039999998" green="0.58823529409999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="忠孝東路四段/光復南路(東南側)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TFp-7F-XgH">
+                                        <rect key="frame" x="20" y="45" width="432" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.82745098039999998" green="0.58823529409999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IRq-Vm-c3h">
+                                        <rect key="frame" x="571" y="28" width="153" height="92"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="80"/>
+                                        <color key="textColor" red="0.80000000000000004" green="0.4431372549" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jc7-XL-Rho">
+                                        <rect key="frame" x="0.0" y="118" width="768" height="2"/>
+                                        <color key="backgroundColor" red="0.65098039220000004" green="0.56862745100000001" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="kzo-CN-7Ov"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.94509803920000002" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="IRq-Vm-c3h" firstAttribute="width" secondItem="0t4-8V-NPB" secondAttribute="width" multiplier="1:5" id="0yn-uw-cpI"/>
+                                    <constraint firstAttribute="trailing" secondItem="anR-2N-CHC" secondAttribute="trailing" constant="20" id="1la-ao-Dek"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jc7-XL-Rho" secondAttribute="bottom" id="4wY-dp-17E"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wwv-CI-AVY" secondAttribute="bottom" constant="16" id="5d7-n1-D7D"/>
+                                    <constraint firstItem="xkT-nw-L7r" firstAttribute="top" secondItem="0t4-8V-NPB" secondAttribute="top" constant="10" id="7ij-rq-dYu"/>
+                                    <constraint firstItem="anR-2N-CHC" firstAttribute="leading" secondItem="xkT-nw-L7r" secondAttribute="trailing" constant="8" id="GMY-ZF-NM2"/>
+                                    <constraint firstAttribute="height" constant="120" id="Pba-Us-cxk"/>
+                                    <constraint firstItem="xkT-nw-L7r" firstAttribute="leading" secondItem="0t4-8V-NPB" secondAttribute="leading" constant="20" id="Pwz-wg-2Pt"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Db-bS-1I1" secondAttribute="bottom" constant="16" id="YFL-y6-TT6"/>
+                                    <constraint firstItem="Jc7-XL-Rho" firstAttribute="leading" secondItem="0t4-8V-NPB" secondAttribute="leading" id="YkX-9R-CI3"/>
+                                    <constraint firstItem="TFp-7F-XgH" firstAttribute="top" secondItem="xkT-nw-L7r" secondAttribute="bottom" constant="5" id="ZFl-Cb-1Da"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jc7-XL-Rho" secondAttribute="trailing" id="iHU-OV-BwY"/>
+                                    <constraint firstItem="IRq-Vm-c3h" firstAttribute="leading" secondItem="7Db-bS-1I1" secondAttribute="trailing" constant="4" id="jFW-tD-pjb"/>
+                                    <constraint firstAttribute="trailing" secondItem="TFp-7F-XgH" secondAttribute="trailing" multiplier="1.7:1" id="kQ7-j2-4DI"/>
+                                    <constraint firstAttribute="bottom" secondItem="IRq-Vm-c3h" secondAttribute="bottom" id="oRI-iu-ylY"/>
+                                    <constraint firstItem="TFp-7F-XgH" firstAttribute="leading" secondItem="0t4-8V-NPB" secondAttribute="leading" constant="20" id="rJB-xW-t96"/>
+                                    <constraint firstItem="anR-2N-CHC" firstAttribute="top" secondItem="0t4-8V-NPB" secondAttribute="top" constant="10" id="sE1-Pa-iJU"/>
+                                    <constraint firstItem="Wwv-CI-AVY" firstAttribute="leading" secondItem="IRq-Vm-c3h" secondAttribute="trailing" constant="4" id="tLk-Xr-UoD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wwv-CI-AVY" secondAttribute="trailing" constant="20" id="umu-m5-xXo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Leh-jH-E2n" firstAttribute="top" secondItem="Qmg-hn-jXB" secondAttribute="bottom" id="1Zn-YY-dX7"/>
+                            <constraint firstItem="Leh-jH-E2n" firstAttribute="leading" secondItem="Pis-nv-M2c" secondAttribute="leading" id="2n7-7H-44j"/>
+                            <constraint firstItem="0t4-8V-NPB" firstAttribute="top" secondItem="Zk6-68-Atn" secondAttribute="bottom" id="4oW-Rb-WpT"/>
+                            <constraint firstItem="4tn-Sr-hM8" firstAttribute="top" secondItem="Leh-jH-E2n" secondAttribute="bottom" id="73W-gf-hRS"/>
+                            <constraint firstItem="Qmg-hn-jXB" firstAttribute="top" secondItem="0t4-8V-NPB" secondAttribute="top" id="Xvw-Su-q94"/>
+                            <constraint firstItem="Qmg-hn-jXB" firstAttribute="leading" secondItem="Pis-nv-M2c" secondAttribute="leading" id="bc9-1z-gW3"/>
+                            <constraint firstAttribute="trailing" secondItem="Leh-jH-E2n" secondAttribute="trailing" id="fAG-rm-LL3"/>
+                            <constraint firstAttribute="trailing" secondItem="Qmg-hn-jXB" secondAttribute="trailing" id="hyf-V6-xU4"/>
+                            <constraint firstItem="0t4-8V-NPB" firstAttribute="leading" secondItem="Pis-nv-M2c" secondAttribute="leading" id="owh-49-SUR"/>
+                            <constraint firstAttribute="trailing" secondItem="0t4-8V-NPB" secondAttribute="trailing" id="xsS-z7-jlH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="1KP-yZ-bPE"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="TFp-7F-XgH" id="cIX-rn-MdU"/>
+                        <outlet property="bikesLabel" destination="Wwv-CI-AVY" id="diJ-Vw-qGe"/>
+                        <outlet property="mapView" destination="Qmg-hn-jXB" id="XtO-uV-pAY"/>
+                        <outlet property="nameLabel" destination="anR-2N-CHC" id="A4i-BS-dTC"/>
+                        <outlet property="numberLabel" destination="IRq-Vm-c3h" id="rK1-RV-Ulc"/>
+                        <outlet property="segmentControl" destination="NKS-RT-nHx" id="TqI-mC-uVS"/>
+                        <outlet property="segmentView" destination="Leh-jH-E2n" id="3bM-9v-uma"/>
+                        <outlet property="stationView" destination="0t4-8V-NPB" id="aqi-7O-1NR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IOc-rX-wYB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="946" y="193"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iconMarker" width="30" height="30"/>
+    </resources>
+</document>

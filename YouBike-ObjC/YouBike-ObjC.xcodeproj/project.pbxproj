@@ -9,11 +9,22 @@
 /* Begin PBXBuildFile section */
 		205AE7BD1EC14F7700445A9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE7BC1EC14F7700445A9F /* main.m */; };
 		205AE7C01EC14F7700445A9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE7BF1EC14F7700445A9F /* AppDelegate.m */; };
-		205AE7C31EC14F7700445A9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE7C21EC14F7700445A9F /* ViewController.m */; };
 		205AE7C61EC14F7700445A9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205AE7C41EC14F7700445A9F /* Main.storyboard */; };
 		205AE7C91EC14F7700445A9F /* YouBike_ObjC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 205AE7C71EC14F7700445A9F /* YouBike_ObjC.xcdatamodeld */; };
 		205AE7CB1EC14F7700445A9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 205AE7CA1EC14F7700445A9F /* Assets.xcassets */; };
 		205AE7CE1EC14F7700445A9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205AE7CC1EC14F7700445A9F /* LaunchScreen.storyboard */; };
+		205AE8161EC156BD00445A9F /* StoryboardiPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 205AE8151EC156BD00445A9F /* StoryboardiPad.storyboard */; };
+		205AE8191EC1589500445A9F /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE8181EC1589500445A9F /* LoginViewController.m */; };
+		205AE81C1EC158A700445A9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE81B1EC158A700445A9F /* ViewController.m */; };
+		205AE81F1EC158B900445A9F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE81E1EC158B900445A9F /* MapViewController.m */; };
+		205AE8301EC158F800445A9F /* ProfileNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE8211EC158F800445A9F /* ProfileNavigationController.m */; };
+		205AE8311EC158F800445A9F /* StationNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE8231EC158F800445A9F /* StationNavigationController.m */; };
+		205AE8321EC158F800445A9F /* MapNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE8251EC158F800445A9F /* MapNavigationController.m */; };
+		205AE8331EC158F800445A9F /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE8271EC158F800445A9F /* TabBarViewController.m */; };
+		205AE8341EC158F800445A9F /* SplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE8291EC158F800445A9F /* SplitViewController.m */; };
+		205AE8351EC158F800445A9F /* StationCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE82B1EC158F800445A9F /* StationCollectionViewController.m */; };
+		205AE8361EC158F800445A9F /* StationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE82D1EC158F800445A9F /* StationTableViewController.m */; };
+		205AE8371EC158F800445A9F /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 205AE82F1EC158F800445A9F /* ProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +32,34 @@
 		205AE7BC1EC14F7700445A9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		205AE7BE1EC14F7700445A9F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		205AE7BF1EC14F7700445A9F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		205AE7C11EC14F7700445A9F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		205AE7C21EC14F7700445A9F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		205AE7C51EC14F7700445A9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		205AE7C81EC14F7700445A9F /* YouBike_ObjC.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YouBike_ObjC.xcdatamodel; sourceTree = "<group>"; };
 		205AE7CA1EC14F7700445A9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		205AE7CD1EC14F7700445A9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		205AE7CF1EC14F7700445A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		205AE8151EC156BD00445A9F /* StoryboardiPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardiPad.storyboard; sourceTree = "<group>"; };
+		205AE8171EC1589500445A9F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		205AE8181EC1589500445A9F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		205AE81A1EC158A700445A9F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		205AE81B1EC158A700445A9F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		205AE81D1EC158B900445A9F /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		205AE81E1EC158B900445A9F /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		205AE8201EC158F800445A9F /* ProfileNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileNavigationController.h; sourceTree = "<group>"; };
+		205AE8211EC158F800445A9F /* ProfileNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileNavigationController.m; sourceTree = "<group>"; };
+		205AE8221EC158F800445A9F /* StationNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationNavigationController.h; sourceTree = "<group>"; };
+		205AE8231EC158F800445A9F /* StationNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationNavigationController.m; sourceTree = "<group>"; };
+		205AE8241EC158F800445A9F /* MapNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapNavigationController.h; sourceTree = "<group>"; };
+		205AE8251EC158F800445A9F /* MapNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapNavigationController.m; sourceTree = "<group>"; };
+		205AE8261EC158F800445A9F /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		205AE8271EC158F800445A9F /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		205AE8281EC158F800445A9F /* SplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitViewController.h; sourceTree = "<group>"; };
+		205AE8291EC158F800445A9F /* SplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitViewController.m; sourceTree = "<group>"; };
+		205AE82A1EC158F800445A9F /* StationCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationCollectionViewController.h; sourceTree = "<group>"; };
+		205AE82B1EC158F800445A9F /* StationCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationCollectionViewController.m; sourceTree = "<group>"; };
+		205AE82C1EC158F800445A9F /* StationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationTableViewController.h; sourceTree = "<group>"; };
+		205AE82D1EC158F800445A9F /* StationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationTableViewController.m; sourceTree = "<group>"; };
+		205AE82E1EC158F800445A9F /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		205AE82F1EC158F800445A9F /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +94,9 @@
 			children = (
 				205AE7BE1EC14F7700445A9F /* AppDelegate.h */,
 				205AE7BF1EC14F7700445A9F /* AppDelegate.m */,
-				205AE7C11EC14F7700445A9F /* ViewController.h */,
-				205AE7C21EC14F7700445A9F /* ViewController.m */,
+				205AE7F31EC1564000445A9F /* Controller */,
 				205AE7C41EC14F7700445A9F /* Main.storyboard */,
+				205AE8151EC156BD00445A9F /* StoryboardiPad.storyboard */,
 				205AE7CA1EC14F7700445A9F /* Assets.xcassets */,
 				205AE7CC1EC14F7700445A9F /* LaunchScreen.storyboard */,
 				205AE7CF1EC14F7700445A9F /* Info.plist */,
@@ -80,6 +112,35 @@
 				205AE7BC1EC14F7700445A9F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		205AE7F31EC1564000445A9F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				205AE8171EC1589500445A9F /* LoginViewController.h */,
+				205AE8181EC1589500445A9F /* LoginViewController.m */,
+				205AE81A1EC158A700445A9F /* ViewController.h */,
+				205AE81B1EC158A700445A9F /* ViewController.m */,
+				205AE81D1EC158B900445A9F /* MapViewController.h */,
+				205AE81E1EC158B900445A9F /* MapViewController.m */,
+				205AE8201EC158F800445A9F /* ProfileNavigationController.h */,
+				205AE8211EC158F800445A9F /* ProfileNavigationController.m */,
+				205AE8221EC158F800445A9F /* StationNavigationController.h */,
+				205AE8231EC158F800445A9F /* StationNavigationController.m */,
+				205AE8241EC158F800445A9F /* MapNavigationController.h */,
+				205AE8251EC158F800445A9F /* MapNavigationController.m */,
+				205AE8261EC158F800445A9F /* TabBarViewController.h */,
+				205AE8271EC158F800445A9F /* TabBarViewController.m */,
+				205AE8281EC158F800445A9F /* SplitViewController.h */,
+				205AE8291EC158F800445A9F /* SplitViewController.m */,
+				205AE82A1EC158F800445A9F /* StationCollectionViewController.h */,
+				205AE82B1EC158F800445A9F /* StationCollectionViewController.m */,
+				205AE82C1EC158F800445A9F /* StationTableViewController.h */,
+				205AE82D1EC158F800445A9F /* StationTableViewController.m */,
+				205AE82E1EC158F800445A9F /* ProfileViewController.h */,
+				205AE82F1EC158F800445A9F /* ProfileViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +205,7 @@
 				205AE7CE1EC14F7700445A9F /* LaunchScreen.storyboard in Resources */,
 				205AE7CB1EC14F7700445A9F /* Assets.xcassets in Resources */,
 				205AE7C61EC14F7700445A9F /* Main.storyboard in Resources */,
+				205AE8161EC156BD00445A9F /* StoryboardiPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,10 +216,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				205AE7C31EC14F7700445A9F /* ViewController.m in Sources */,
+				205AE8341EC158F800445A9F /* SplitViewController.m in Sources */,
+				205AE8331EC158F800445A9F /* TabBarViewController.m in Sources */,
+				205AE8191EC1589500445A9F /* LoginViewController.m in Sources */,
 				205AE7C01EC14F7700445A9F /* AppDelegate.m in Sources */,
+				205AE8371EC158F800445A9F /* ProfileViewController.m in Sources */,
 				205AE7C91EC14F7700445A9F /* YouBike_ObjC.xcdatamodeld in Sources */,
+				205AE8301EC158F800445A9F /* ProfileNavigationController.m in Sources */,
+				205AE81F1EC158B900445A9F /* MapViewController.m in Sources */,
+				205AE8351EC158F800445A9F /* StationCollectionViewController.m in Sources */,
 				205AE7BD1EC14F7700445A9F /* main.m in Sources */,
+				205AE8311EC158F800445A9F /* StationNavigationController.m in Sources */,
+				205AE8361EC158F800445A9F /* StationTableViewController.m in Sources */,
+				205AE8321EC158F800445A9F /* MapNavigationController.m in Sources */,
+				205AE81C1EC158A700445A9F /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
