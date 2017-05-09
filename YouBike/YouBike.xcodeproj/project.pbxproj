@@ -1,0 +1,448 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2063C8731EC17CCA0099F8FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C8721EC17CCA0099F8FC /* main.m */; };
+		2063C8761EC17CCA0099F8FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C8751EC17CCA0099F8FC /* AppDelegate.m */; };
+		2063C87C1EC17CCA0099F8FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2063C87A1EC17CCA0099F8FC /* Main.storyboard */; };
+		2063C87F1EC17CCA0099F8FC /* YouBike.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2063C87D1EC17CCA0099F8FC /* YouBike.xcdatamodeld */; };
+		2063C8811EC17CCA0099F8FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2063C8801EC17CCA0099F8FC /* Assets.xcassets */; };
+		2063C8841EC17CCA0099F8FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2063C8821EC17CCA0099F8FC /* LaunchScreen.storyboard */; };
+		2063C8AD1EC17CF20099F8FC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C88D1EC17CF20099F8FC /* LoginViewController.m */; };
+		2063C8AE1EC17CF20099F8FC /* MapNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C88F1EC17CF20099F8FC /* MapNavigationController.m */; };
+		2063C8AF1EC17CF20099F8FC /* MapTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C8911EC17CF20099F8FC /* MapTableViewController.m */; };
+		2063C8B01EC17CF20099F8FC /* ProfileNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C8931EC17CF20099F8FC /* ProfileNavigationController.m */; };
+		2063C8B11EC17CF20099F8FC /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C8951EC17CF20099F8FC /* ProfileViewController.m */; };
+		2063C8B21EC17CF20099F8FC /* SplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C8971EC17CF20099F8FC /* SplitViewController.m */; };
+		2063C8B31EC17CF20099F8FC /* StationCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C8991EC17CF20099F8FC /* StationCollectionViewController.m */; };
+		2063C8B41EC17CF20099F8FC /* StationNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C89B1EC17CF20099F8FC /* StationNavigationController.m */; };
+		2063C8B51EC17CF20099F8FC /* StationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C89D1EC17CF20099F8FC /* StationTableViewController.m */; };
+		2063C8B61EC17CF20099F8FC /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C89F1EC17CF20099F8FC /* TabBarViewController.m */; };
+		2063C8B71EC17CF20099F8FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C8A11EC17CF20099F8FC /* ViewController.m */; };
+		2063C8B81EC17CF20099F8FC /* StoryboardiPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2063C8A21EC17CF20099F8FC /* StoryboardiPad.storyboard */; };
+		2063C8B91EC17CF20099F8FC /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C8A51EC17CF20099F8FC /* CommentTableViewCell.m */; };
+		2063C8BA1EC17CF20099F8FC /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2063C8A61EC17CF20099F8FC /* CommentTableViewCell.xib */; };
+		2063C8BB1EC17CF20099F8FC /* StationCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C8A81EC17CF20099F8FC /* StationCollectionViewCell.m */; };
+		2063C8BC1EC17CF20099F8FC /* StationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2063C8A91EC17CF20099F8FC /* StationCollectionViewCell.xib */; };
+		2063C8BD1EC17CF20099F8FC /* StationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C8AB1EC17CF20099F8FC /* StationTableViewCell.m */; };
+		2063C8BE1EC17CF20099F8FC /* StationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2063C8AC1EC17CF20099F8FC /* StationTableViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2063C86E1EC17CCA0099F8FC /* YouBike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBike.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2063C8721EC17CCA0099F8FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2063C8741EC17CCA0099F8FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2063C8751EC17CCA0099F8FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2063C87B1EC17CCA0099F8FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2063C87E1EC17CCA0099F8FC /* YouBike.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YouBike.xcdatamodel; sourceTree = "<group>"; };
+		2063C8801EC17CCA0099F8FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2063C8831EC17CCA0099F8FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2063C8851EC17CCA0099F8FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2063C88C1EC17CF20099F8FC /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2063C88D1EC17CF20099F8FC /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2063C88E1EC17CF20099F8FC /* MapNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapNavigationController.h; sourceTree = "<group>"; };
+		2063C88F1EC17CF20099F8FC /* MapNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapNavigationController.m; sourceTree = "<group>"; };
+		2063C8901EC17CF20099F8FC /* MapTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTableViewController.h; sourceTree = "<group>"; };
+		2063C8911EC17CF20099F8FC /* MapTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTableViewController.m; sourceTree = "<group>"; };
+		2063C8921EC17CF20099F8FC /* ProfileNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileNavigationController.h; sourceTree = "<group>"; };
+		2063C8931EC17CF20099F8FC /* ProfileNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileNavigationController.m; sourceTree = "<group>"; };
+		2063C8941EC17CF20099F8FC /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		2063C8951EC17CF20099F8FC /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		2063C8961EC17CF20099F8FC /* SplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitViewController.h; sourceTree = "<group>"; };
+		2063C8971EC17CF20099F8FC /* SplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitViewController.m; sourceTree = "<group>"; };
+		2063C8981EC17CF20099F8FC /* StationCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationCollectionViewController.h; sourceTree = "<group>"; };
+		2063C8991EC17CF20099F8FC /* StationCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationCollectionViewController.m; sourceTree = "<group>"; };
+		2063C89A1EC17CF20099F8FC /* StationNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationNavigationController.h; sourceTree = "<group>"; };
+		2063C89B1EC17CF20099F8FC /* StationNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationNavigationController.m; sourceTree = "<group>"; };
+		2063C89C1EC17CF20099F8FC /* StationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationTableViewController.h; sourceTree = "<group>"; };
+		2063C89D1EC17CF20099F8FC /* StationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationTableViewController.m; sourceTree = "<group>"; };
+		2063C89E1EC17CF20099F8FC /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		2063C89F1EC17CF20099F8FC /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		2063C8A01EC17CF20099F8FC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2063C8A11EC17CF20099F8FC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2063C8A21EC17CF20099F8FC /* StoryboardiPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardiPad.storyboard; sourceTree = "<group>"; };
+		2063C8A41EC17CF20099F8FC /* CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
+		2063C8A51EC17CF20099F8FC /* CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
+		2063C8A61EC17CF20099F8FC /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		2063C8A71EC17CF20099F8FC /* StationCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationCollectionViewCell.h; sourceTree = "<group>"; };
+		2063C8A81EC17CF20099F8FC /* StationCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationCollectionViewCell.m; sourceTree = "<group>"; };
+		2063C8A91EC17CF20099F8FC /* StationCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StationCollectionViewCell.xib; sourceTree = "<group>"; };
+		2063C8AA1EC17CF20099F8FC /* StationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationTableViewCell.h; sourceTree = "<group>"; };
+		2063C8AB1EC17CF20099F8FC /* StationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationTableViewCell.m; sourceTree = "<group>"; };
+		2063C8AC1EC17CF20099F8FC /* StationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StationTableViewCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2063C86B1EC17CCA0099F8FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2063C8651EC17CCA0099F8FC = {
+			isa = PBXGroup;
+			children = (
+				2063C8701EC17CCA0099F8FC /* YouBike */,
+				2063C86F1EC17CCA0099F8FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2063C86F1EC17CCA0099F8FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2063C86E1EC17CCA0099F8FC /* YouBike.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2063C8701EC17CCA0099F8FC /* YouBike */ = {
+			isa = PBXGroup;
+			children = (
+				2063C8741EC17CCA0099F8FC /* AppDelegate.h */,
+				2063C8751EC17CCA0099F8FC /* AppDelegate.m */,
+				2063C87A1EC17CCA0099F8FC /* Main.storyboard */,
+				2063C8801EC17CCA0099F8FC /* Assets.xcassets */,
+				2063C8821EC17CCA0099F8FC /* LaunchScreen.storyboard */,
+				2063C8851EC17CCA0099F8FC /* Info.plist */,
+				2063C87D1EC17CCA0099F8FC /* YouBike.xcdatamodeld */,
+				2063C88B1EC17CF20099F8FC /* Controller */,
+				2063C8A21EC17CF20099F8FC /* StoryboardiPad.storyboard */,
+				2063C8A31EC17CF20099F8FC /* View */,
+				2063C8711EC17CCA0099F8FC /* Supporting Files */,
+			);
+			path = YouBike;
+			sourceTree = "<group>";
+		};
+		2063C8711EC17CCA0099F8FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2063C8721EC17CCA0099F8FC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2063C88B1EC17CF20099F8FC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2063C88C1EC17CF20099F8FC /* LoginViewController.h */,
+				2063C88D1EC17CF20099F8FC /* LoginViewController.m */,
+				2063C88E1EC17CF20099F8FC /* MapNavigationController.h */,
+				2063C88F1EC17CF20099F8FC /* MapNavigationController.m */,
+				2063C8901EC17CF20099F8FC /* MapTableViewController.h */,
+				2063C8911EC17CF20099F8FC /* MapTableViewController.m */,
+				2063C8921EC17CF20099F8FC /* ProfileNavigationController.h */,
+				2063C8931EC17CF20099F8FC /* ProfileNavigationController.m */,
+				2063C8941EC17CF20099F8FC /* ProfileViewController.h */,
+				2063C8951EC17CF20099F8FC /* ProfileViewController.m */,
+				2063C8961EC17CF20099F8FC /* SplitViewController.h */,
+				2063C8971EC17CF20099F8FC /* SplitViewController.m */,
+				2063C8981EC17CF20099F8FC /* StationCollectionViewController.h */,
+				2063C8991EC17CF20099F8FC /* StationCollectionViewController.m */,
+				2063C89A1EC17CF20099F8FC /* StationNavigationController.h */,
+				2063C89B1EC17CF20099F8FC /* StationNavigationController.m */,
+				2063C89C1EC17CF20099F8FC /* StationTableViewController.h */,
+				2063C89D1EC17CF20099F8FC /* StationTableViewController.m */,
+				2063C89E1EC17CF20099F8FC /* TabBarViewController.h */,
+				2063C89F1EC17CF20099F8FC /* TabBarViewController.m */,
+				2063C8A01EC17CF20099F8FC /* ViewController.h */,
+				2063C8A11EC17CF20099F8FC /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2063C8A31EC17CF20099F8FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2063C8A41EC17CF20099F8FC /* CommentTableViewCell.h */,
+				2063C8A51EC17CF20099F8FC /* CommentTableViewCell.m */,
+				2063C8A61EC17CF20099F8FC /* CommentTableViewCell.xib */,
+				2063C8A71EC17CF20099F8FC /* StationCollectionViewCell.h */,
+				2063C8A81EC17CF20099F8FC /* StationCollectionViewCell.m */,
+				2063C8A91EC17CF20099F8FC /* StationCollectionViewCell.xib */,
+				2063C8AA1EC17CF20099F8FC /* StationTableViewCell.h */,
+				2063C8AB1EC17CF20099F8FC /* StationTableViewCell.m */,
+				2063C8AC1EC17CF20099F8FC /* StationTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2063C86D1EC17CCA0099F8FC /* YouBike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2063C8881EC17CCA0099F8FC /* Build configuration list for PBXNativeTarget "YouBike" */;
+			buildPhases = (
+				2063C86A1EC17CCA0099F8FC /* Sources */,
+				2063C86B1EC17CCA0099F8FC /* Frameworks */,
+				2063C86C1EC17CCA0099F8FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YouBike;
+			productName = YouBike;
+			productReference = 2063C86E1EC17CCA0099F8FC /* YouBike.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2063C8661EC17CCA0099F8FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "劉仲軒";
+				TargetAttributes = {
+					2063C86D1EC17CCA0099F8FC = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = U9WVFKNWBQ;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2063C8691EC17CCA0099F8FC /* Build configuration list for PBXProject "YouBike" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2063C8651EC17CCA0099F8FC;
+			productRefGroup = 2063C86F1EC17CCA0099F8FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2063C86D1EC17CCA0099F8FC /* YouBike */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2063C86C1EC17CCA0099F8FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2063C8841EC17CCA0099F8FC /* LaunchScreen.storyboard in Resources */,
+				2063C8811EC17CCA0099F8FC /* Assets.xcassets in Resources */,
+				2063C87C1EC17CCA0099F8FC /* Main.storyboard in Resources */,
+				2063C8B81EC17CF20099F8FC /* StoryboardiPad.storyboard in Resources */,
+				2063C8BE1EC17CF20099F8FC /* StationTableViewCell.xib in Resources */,
+				2063C8BA1EC17CF20099F8FC /* CommentTableViewCell.xib in Resources */,
+				2063C8BC1EC17CF20099F8FC /* StationCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2063C86A1EC17CCA0099F8FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2063C87F1EC17CCA0099F8FC /* YouBike.xcdatamodeld in Sources */,
+				2063C8BB1EC17CF20099F8FC /* StationCollectionViewCell.m in Sources */,
+				2063C8B11EC17CF20099F8FC /* ProfileViewController.m in Sources */,
+				2063C8B61EC17CF20099F8FC /* TabBarViewController.m in Sources */,
+				2063C8B41EC17CF20099F8FC /* StationNavigationController.m in Sources */,
+				2063C8761EC17CCA0099F8FC /* AppDelegate.m in Sources */,
+				2063C8731EC17CCA0099F8FC /* main.m in Sources */,
+				2063C8B91EC17CF20099F8FC /* CommentTableViewCell.m in Sources */,
+				2063C8AE1EC17CF20099F8FC /* MapNavigationController.m in Sources */,
+				2063C8B31EC17CF20099F8FC /* StationCollectionViewController.m in Sources */,
+				2063C8B71EC17CF20099F8FC /* ViewController.m in Sources */,
+				2063C8BD1EC17CF20099F8FC /* StationTableViewCell.m in Sources */,
+				2063C8B01EC17CF20099F8FC /* ProfileNavigationController.m in Sources */,
+				2063C8B21EC17CF20099F8FC /* SplitViewController.m in Sources */,
+				2063C8B51EC17CF20099F8FC /* StationTableViewController.m in Sources */,
+				2063C8AD1EC17CF20099F8FC /* LoginViewController.m in Sources */,
+				2063C8AF1EC17CF20099F8FC /* MapTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2063C87A1EC17CCA0099F8FC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2063C87B1EC17CCA0099F8FC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2063C8821EC17CCA0099F8FC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2063C8831EC17CCA0099F8FC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2063C8861EC17CCA0099F8FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2063C8871EC17CCA0099F8FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2063C8891EC17CCA0099F8FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U9WVFKNWBQ;
+				INFOPLIST_FILE = YouBike/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.turtlexuan.YouBike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2063C88A1EC17CCA0099F8FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U9WVFKNWBQ;
+				INFOPLIST_FILE = YouBike/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.turtlexuan.YouBike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2063C8691EC17CCA0099F8FC /* Build configuration list for PBXProject "YouBike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2063C8861EC17CCA0099F8FC /* Debug */,
+				2063C8871EC17CCA0099F8FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2063C8881EC17CCA0099F8FC /* Build configuration list for PBXNativeTarget "YouBike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2063C8891EC17CCA0099F8FC /* Debug */,
+				2063C88A1EC17CCA0099F8FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2063C87D1EC17CCA0099F8FC /* YouBike.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2063C87E1EC17CCA0099F8FC /* YouBike.xcdatamodel */,
+			);
+			currentVersion = 2063C87E1EC17CCA0099F8FC /* YouBike.xcdatamodel */;
+			path = YouBike.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2063C8661EC17CCA0099F8FC /* Project object */;
+}

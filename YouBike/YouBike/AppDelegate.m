@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  YouBike-ObjC
+//  YouBike
 //
 //  Created by 劉仲軒 on 2017/5/9.
 //  Copyright © 2017年 劉仲軒. All rights reserved.
@@ -58,7 +58,7 @@
     // The persistent container for the application. This implementation creates and returns a container, having loaded the store for the application to it.
     @synchronized (self) {
         if (_persistentContainer == nil) {
-            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"YouBike_ObjC"];
+            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"YouBike"];
             [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
                 if (error != nil) {
                     // Replace this implementation with code to handle the error appropriately.
