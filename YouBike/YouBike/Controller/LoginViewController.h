@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "Constants.h"
+#import "Station.h"
 
 @interface LoginViewController : UIViewController
 

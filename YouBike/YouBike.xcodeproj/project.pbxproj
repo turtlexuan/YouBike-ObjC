@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2032B8B91EC58C6C0011329F /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 2032B8B81EC58C6C0011329F /* Station.m */; };
 		2063C8731EC17CCA0099F8FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C8721EC17CCA0099F8FC /* main.m */; };
 		2063C8761EC17CCA0099F8FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C8751EC17CCA0099F8FC /* AppDelegate.m */; };
 		2063C87C1EC17CCA0099F8FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2063C87A1EC17CCA0099F8FC /* Main.storyboard */; };
@@ -35,6 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2032B8B51EC55C730011329F /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		2032B8B71EC58C6C0011329F /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Station.h; sourceTree = "<group>"; };
+		2032B8B81EC58C6C0011329F /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Station.m; sourceTree = "<group>"; };
 		2063C86E1EC17CCA0099F8FC /* YouBike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2063C8721EC17CCA0099F8FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2063C8741EC17CCA0099F8FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -93,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2032B8B61EC58C530011329F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2032B8B71EC58C6C0011329F /* Station.h */,
+				2032B8B81EC58C6C0011329F /* Station.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2063C8651EC17CCA0099F8FC = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +129,7 @@
 			children = (
 				2063C8741EC17CCA0099F8FC /* AppDelegate.h */,
 				2063C8751EC17CCA0099F8FC /* AppDelegate.m */,
+				2032B8B51EC55C730011329F /* Constants.h */,
 				2063C87A1EC17CCA0099F8FC /* Main.storyboard */,
 				2063C8801EC17CCA0099F8FC /* Assets.xcassets */,
 				2063C8821EC17CCA0099F8FC /* LaunchScreen.storyboard */,
@@ -124,6 +138,7 @@
 				2063C88B1EC17CF20099F8FC /* Controller */,
 				2063C8A21EC17CF20099F8FC /* StoryboardiPad.storyboard */,
 				2063C8A31EC17CF20099F8FC /* View */,
+				2032B8B61EC58C530011329F /* Model */,
 				2063C8711EC17CCA0099F8FC /* Supporting Files */,
 			);
 			path = YouBike;
@@ -334,6 +349,7 @@
 				2063C8761EC17CCA0099F8FC /* AppDelegate.m in Sources */,
 				2063C8731EC17CCA0099F8FC /* main.m in Sources */,
 				2063C8B91EC17CF20099F8FC /* CommentTableViewCell.m in Sources */,
+				2032B8B91EC58C6C0011329F /* Station.m in Sources */,
 				2063C8AE1EC17CF20099F8FC /* MapNavigationController.m in Sources */,
 				2063C8B31EC17CF20099F8FC /* StationCollectionViewController.m in Sources */,
 				2063C8B71EC17CF20099F8FC /* ViewController.m in Sources */,

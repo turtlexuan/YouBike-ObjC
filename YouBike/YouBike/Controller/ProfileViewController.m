@@ -64,8 +64,8 @@
     rectShape.bounds = self.backgroundView.frame;
     rectShape.position = self.backgroundView.center;
     rectShape.path = [UIBezierPath bezierPathWithRoundedRect: self.backgroundView.bounds
-                                           byRoundingCorners:UIRectCornerBottomLeft | UIRectCornerBottomRight
-                                                 cornerRadii:CGSizeMake(20, 20)].CGPath;
+                                           byRoundingCorners: UIRectCornerBottomLeft | UIRectCornerBottomRight
+                                                 cornerRadii: CGSizeMake(20, 20)].CGPath;
     
     self.backgroundView.layer.mask = rectShape;
     
