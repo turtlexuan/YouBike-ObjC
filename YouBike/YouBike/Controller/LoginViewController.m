@@ -102,7 +102,7 @@
         NSString *url = [source objectForKey:@"url"];
         
         if (url != nil) {
-            [NSUserDefaults.standardUserDefaults setObject:picture forKey:FBLOGIN_PICTURE];
+            [NSUserDefaults.standardUserDefaults setObject:url forKey:FBLOGIN_PICTURE];
         }
         
         [self nextVC];
