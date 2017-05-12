@@ -11,7 +11,17 @@
 @interface Station : NSObject
 
 @property (nonatomic, readonly) NSString * name;
+@property (nonatomic, readonly) NSString * address;
+@property (nonatomic, readonly) int * numberOfRemainingBikes;
+@property (nonatomic, readonly) double * lati;
+@property (nonatomic, readonly) double * longi;
+@property (nonatomic, readonly) NSString * stationID;
 
-- (instancetype) initWithName:(NSString *)name;
+- (instancetype) initWithName:(NSString *)name
+                      address:(NSString *)address
+       numberOfRemainingBikes:(int *)number
+                         lati:(double *)lati
+                        longi:(double *)longi
+                    stationID:(NSString *)stationID;
 
 @end

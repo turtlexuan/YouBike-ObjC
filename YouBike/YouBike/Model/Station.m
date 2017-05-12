@@ -10,9 +10,19 @@
 
 @implementation Station
 
-- (instancetype) initWithName:(NSString *)name {
+- (instancetype) initWithName:(NSString *)name
+                      address:(NSString *)address
+       numberOfRemainingBikes:(int *)number
+                         lati:(double *)lati
+                        longi:(double *)longi
+                    stationID:(NSString *)stationID {
     
     _name = name;
+    _address = address;
+    _numberOfRemainingBikes = number;
+    _lati = lati;
+    _longi = longi;
+    _stationID = stationID;
     
     return self;
     
