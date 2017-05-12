@@ -58,8 +58,8 @@
             </constraints>
             <size key="customSize" width="886" height="813"/>
             <connections>
-                <outlet property="nameLabel" destination="Fdr-py-t0k" id="EmH-WT-kit"/>
-                <outlet property="numberLabel" destination="RoW-PH-djF" id="3bQ-oZ-cmn"/>
+                <outlet property="nameLabel" destination="Fdr-py-t0k" id="wlV-Je-m01"/>
+                <outlet property="numberLabel" destination="RoW-PH-djF" id="pih-nt-KUu"/>
             </connections>
             <point key="canvasLocation" x="424.5" y="425.5"/>
         </collectionViewCell>

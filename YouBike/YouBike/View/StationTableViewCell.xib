@@ -101,12 +101,12 @@
             </tableViewCellContentView>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
-                <outlet property="addressLabel" destination="WLZ-LJ-YYX" id="ofb-xb-42e"/>
-                <outlet property="bikesLabel" destination="Ca1-9P-8Cx" id="CcV-AC-1FA"/>
-                <outlet property="mapButton" destination="Inj-lN-Zi8" id="rTB-Z0-zXr"/>
-                <outlet property="nameLabel" destination="TMT-6H-Kzm" id="Zsu-uh-tfD"/>
-                <outlet property="numberLabel" destination="5Ux-te-aDj" id="TmM-F8-5Dj"/>
-                <outlet property="remainLabel" destination="C46-2r-u6T" id="phC-2b-LTR"/>
+                <outlet property="addressLabel" destination="WLZ-LJ-YYX" id="uaX-mR-DXZ"/>
+                <outlet property="bikesLabel" destination="Ca1-9P-8Cx" id="YPn-FR-fHZ"/>
+                <outlet property="mapButton" destination="Inj-lN-Zi8" id="w9B-mL-r4Q"/>
+                <outlet property="nameLabel" destination="TMT-6H-Kzm" id="D39-Vu-Qd3"/>
+                <outlet property="numberLabel" destination="5Ux-te-aDj" id="XGf-wP-oIn"/>
+                <outlet property="remainLabel" destination="C46-2r-u6T" id="TkD-G5-U3e"/>
             </connections>
         </tableViewCell>
     </objects>
