@@ -32,6 +32,11 @@
 		2063C8BD1EC17CF20099F8FC /* StationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C8AB1EC17CF20099F8FC /* StationTableViewCell.m */; };
 		2063C8BE1EC17CF20099F8FC /* StationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2063C8AC1EC17CF20099F8FC /* StationTableViewCell.xib */; };
 		46BA2248187336019736CD17 /* libPods-YouBike.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABE72C6D237BC74E122C6544 /* libPods-YouBike.a */; };
+		D1B1DAA91EC1AAEB00994AD5 /* libFBSDKLoginKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B1DAA81EC1AAEB00994AD5 /* libFBSDKLoginKit.a */; };
+		D1B1DAAB1EC1AAF100994AD5 /* libFBSDKCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B1DAAA1EC1AAF100994AD5 /* libFBSDKCoreKit.a */; };
+		D1B1DAAD1EC1AAF500994AD5 /* libFBSDKShareKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B1DAAC1EC1AAF500994AD5 /* libFBSDKShareKit.a */; };
+		D1B1DAAF1EC1AAFB00994AD5 /* libBolts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B1DAAE1EC1AAFB00994AD5 /* libBolts.a */; };
+		D1C0FB791EC58DA700D0C269 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C0FB781EC58DA700D0C269 /* Constants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +84,12 @@
 		8F482465F4FB58E838E9C096 /* Pods-YouBike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouBike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YouBike/Pods-YouBike.debug.xcconfig"; sourceTree = "<group>"; };
 		9BA5818494562274EA31FFE6 /* Pods-YouBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouBike.release.xcconfig"; path = "Pods/Target Support Files/Pods-YouBike/Pods-YouBike.release.xcconfig"; sourceTree = "<group>"; };
 		ABE72C6D237BC74E122C6544 /* libPods-YouBike.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YouBike.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B1DAA81EC1AAEB00994AD5 /* libFBSDKLoginKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFBSDKLoginKit.a; path = "../../Library/Developer/Xcode/DerivedData/YouBike-egfagpyyhjdtfogskqakxwclkktn/Build/Products/Debug-iphonesimulator/FBSDKLoginKit/libFBSDKLoginKit.a"; sourceTree = "<group>"; };
+		D1B1DAAA1EC1AAF100994AD5 /* libFBSDKCoreKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFBSDKCoreKit.a; path = "../../Library/Developer/Xcode/DerivedData/YouBike-egfagpyyhjdtfogskqakxwclkktn/Build/Products/Debug-iphonesimulator/FBSDKCoreKit/libFBSDKCoreKit.a"; sourceTree = "<group>"; };
+		D1B1DAAC1EC1AAF500994AD5 /* libFBSDKShareKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFBSDKShareKit.a; path = "../../Library/Developer/Xcode/DerivedData/YouBike-egfagpyyhjdtfogskqakxwclkktn/Build/Products/Debug-iphonesimulator/FBSDKShareKit/libFBSDKShareKit.a"; sourceTree = "<group>"; };
+		D1B1DAAE1EC1AAFB00994AD5 /* libBolts.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBolts.a; path = "../../Library/Developer/Xcode/DerivedData/YouBike-egfagpyyhjdtfogskqakxwclkktn/Build/Products/Debug-iphonesimulator/Bolts/libBolts.a"; sourceTree = "<group>"; };
+		D1C0FB771EC58DA700D0C269 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Controller/Constants.h; sourceTree = "<group>"; };
+		D1C0FB781EC58DA700D0C269 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Constants.m; path = Controller/Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +97,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1B1DAAF1EC1AAFB00994AD5 /* libBolts.a in Frameworks */,
+				D1B1DAAD1EC1AAF500994AD5 /* libFBSDKShareKit.a in Frameworks */,
+				D1B1DAAB1EC1AAF100994AD5 /* libFBSDKCoreKit.a in Frameworks */,
+				D1B1DAA91EC1AAEB00994AD5 /* libFBSDKLoginKit.a in Frameworks */,
 				46BA2248187336019736CD17 /* libPods-YouBike.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +136,8 @@
 				2063C8821EC17CCA0099F8FC /* LaunchScreen.storyboard */,
 				2063C8851EC17CCA0099F8FC /* Info.plist */,
 				2063C87D1EC17CCA0099F8FC /* YouBike.xcdatamodeld */,
+				D1C0FB771EC58DA700D0C269 /* Constants.h */,
+				D1C0FB781EC58DA700D0C269 /* Constants.m */,
 				2063C88B1EC17CF20099F8FC /* Controller */,
 				2063C8A21EC17CF20099F8FC /* StoryboardiPad.storyboard */,
 				2063C8A31EC17CF20099F8FC /* View */,
@@ -194,6 +211,10 @@
 		AC231255D4F8966201A39DBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D1B1DAAE1EC1AAFB00994AD5 /* libBolts.a */,
+				D1B1DAAC1EC1AAF500994AD5 /* libFBSDKShareKit.a */,
+				D1B1DAAA1EC1AAF100994AD5 /* libFBSDKCoreKit.a */,
+				D1B1DAA81EC1AAEB00994AD5 /* libFBSDKLoginKit.a */,
 				ABE72C6D237BC74E122C6544 /* libPods-YouBike.a */,
 			);
 			name = Frameworks;
@@ -343,6 +364,7 @@
 				2063C8B51EC17CF20099F8FC /* StationTableViewController.m in Sources */,
 				2063C8AD1EC17CF20099F8FC /* LoginViewController.m in Sources */,
 				2063C8AF1EC17CF20099F8FC /* MapTableViewController.m in Sources */,
+				D1C0FB791EC58DA700D0C269 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
