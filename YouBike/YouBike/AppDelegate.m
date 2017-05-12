@@ -47,12 +47,6 @@
     
     return [FBSDKApplicationDelegate.sharedInstance application:app openURL:url options:options];
     
-//    BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:app
-//                                                                  openURL:url
-//                                                        sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
-//                                                               annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
-//    return handled;
-    
 }
 
 
