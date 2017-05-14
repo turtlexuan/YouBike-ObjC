@@ -30,8 +30,10 @@
 @interface YouBikeManager : NSObject
 
 @property (weak, nonatomic) id<YouBikeManagerDelegate> delegate;
+@property (strong, nonatomic) NSMutableArray<Station *> *stationArray;
 
 + (instancetype)sharedInstance;
 - (void)signInWithFacebookWithAccessToken:(NSString*)accessToken withCompletionHandler:(void (^_Nonnull)(NSString * __nullable token, NSString * __nullable tokenType, NSError * __nullable error))completionHandler;
+- (void)getStationsWithToken:(NSString *__nonnull)token withTokenType:(NSString *__nonnull)tokenType;
 
 @end

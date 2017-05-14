@@ -30,6 +30,16 @@
     return sharedInstance;
 }
 
+- (id)init {
+    
+    self = [super init];
+    
+    self.stationArray = [[NSMutableArray alloc] init];
+    
+    return self;
+    
+}
+
 - (void)signInWithFacebookWithAccessToken:(NSString*)accessToken
                     withCompletionHandler:(void (^__nonnull)(NSString * __nullable token,
                                                              NSString * __nullable tokenType,
@@ -85,63 +95,75 @@
 }
 
 - (void)getStationsWithToken:(NSString *__nonnull)token withTokenType:(NSString *__nonnull)tokenType {
-//    let url = URL(string: "\(Constants.URLString.server)\(Constants.URLString.station)")
-//    guard let authorizeData = self.userDefault.object(forKey: Constants.URLReturnData.signInReturn) as? [String: AnyObject] else { return }
-//    let token       = authorizeData["token"]
-//    let tokenType   = authorizeData["tokenType"]
-//    let authString  = "\(tokenType!) \(token!)"
-//    let headers = ["Authorization": authString]
-//    let param = ["paging": self.stationParameter]
-//    
-//    Alamofire.request(url!, method: .get, parameters: param, headers: headers).responseJSON { (response) in
-//        if let error = response.error {
-//            self.delegate?.manager(self, didFailWith: error)
-//            return
-//        }
-//        guard let jsonData = response.result.value as? [String: AnyObject], let stationData = jsonData["data"] as? [[String: AnyObject]], let nextToken = jsonData["paging"] as? [String:AnyObject] else { return }
-//        for station in stationData {
-//            guard let remainBikes       = station["sbi"] as? String, let stationNameCH          = station["sna"] as? String,
-//            let stationAreaCH     = station["sarea"] as? String, let stationAddressCH     = station["ar"] as? String,
-//            let lati              = station["lat"] as? String, let longi                  = station["lng"] as? String,
-//            let id                = station["sno"] as? String, let stationNameEN          = station["snaen"] as? String,
-//            let stationAddressEN  = station["aren"] as? String else { return }
-//            
-//            if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-//                let context = appDelegate.persistentContainer.viewContext
-//                let station = StationMO(context: context)
-//                if NSLocale.preferredLanguages.first == "en" {
-//                    station.name = stationNameEN
-//                    station.address = stationAddressEN
-//                } else if NSLocale.preferredLanguages.first == "zh-Hant" {
-//                    station.name = "\(stationAreaCH) / \(stationNameCH)"
-//                    station.address = stationAddressCH
-//                }
-//                station.numberOfRemainingBikes = Int64(remainBikes)!
-//                station.lati = Double(lati)!
-//                station.longi = Double(longi)!
-//                station.stationID = id
-//                appDelegate.saveContext()
-//                
-//                self.stationArray.append(station)
-//            }
-//        }
-//        DispatchQueue.main.async {
-//            self.delegate?.manager(self, didGet: self.stationArray)
-//        }
-//        guard let page = nextToken["next"] as? String else {
-//            self.stationParameter = "Stop"
-//            return
-//        }
-//        self.stationParameter = page
-//    }
 
     NSString *urlString = [NSString stringWithFormat:@"%@%@", URLSTRING_SERVER, URLSTRING_STATION];
-    NSURL *url = [NSURL URLWithString:urlString];
     
-    NSString *authString = [NSString stringWithFormat:@"%@ %@", token, tokenType];
+    NSString *authString = [NSString stringWithFormat:@"%@ %@", tokenType, token];
     
-    NSDictionary *headers = @{@"Authorization": authString};
-    NSDictionary *param = @{@"paging": stationParameter};
+    NSDictionary *param;
+    
+    if (stationParameter != nil) {
+        param = @{@"paging": stationParameter};
+    }
+ 
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    [manager.requestSerializer setValue:authString forHTTPHeaderField:@"Authorization"];
+
+    [manager GET:urlString parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //
+        NSDictionary *jsonObject = (NSDictionary *)responseObject;
+        
+        if (jsonObject == nil) {
+            return;
+        }
+        
+        NSDictionary *data = [jsonObject objectForKey:@"data"];
+        
+        if (data == nil) {
+            return;
+        }
+        
+        NSDictionary *paging = [jsonObject objectForKey:@"paging"];
+        NSString *nextPage = [paging objectForKey:@"next"];
+        
+        if (paging != nil) {
+            stationParameter = nextPage;
+        }
+        
+        NSLog(@"%@", stationParameter);
+
+        for (NSDictionary *station in data) {
+            //
+            NSString *remainBikes = [station objectForKey:@"sbi"];
+            NSString *stationNameCH = [station objectForKey:@"sna"];
+            NSString *stationNameEN = [station objectForKey:@"snaen"];
+            NSString *stationAddressCH = [station objectForKey:@"ar"];
+            NSString *stationAddressEN = [station objectForKey:@"aren"];
+            NSString *lati = [station objectForKey:@"lat"];
+            NSString *longi = [station objectForKey:@"lng"];
+            NSString *stationID = [station objectForKey:@"sno"];
+            
+            int remainBikeValue = [remainBikes intValue];
+            double latiValue = [lati doubleValue];
+            double longiValue = [longi doubleValue];
+
+            Station *oneStation = [[Station alloc] initWithNameCH:stationNameCH nameEN:stationNameEN addressCH:stationAddressCH addressEN:stationAddressEN numberOfRemainingBikes:remainBikeValue lati:latiValue longi:longiValue stationID:stationID];
+            
+            [self.stationArray addObject:oneStation];
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.delegate manager:self didGet:self.stationArray];
+        });
+
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.delegate manager:self didFailWith:error];
+        });
+        
+    }];
     
 }
 

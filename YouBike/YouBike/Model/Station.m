@@ -10,15 +10,19 @@
 
 @implementation Station
 
-- (instancetype) initWithName:(NSString *)name
-                      address:(NSString *)address
-       numberOfRemainingBikes:(int *)number
-                         lati:(double *)lati
-                        longi:(double *)longi
-                    stationID:(NSString *)stationID {
+- (instancetype) initWithNameCH:(NSString*)stationNameCH
+                         nameEN:(NSString *)stationNameEN
+                      addressCH:(NSString *)stationAddressCH
+                      addressEN:(NSString *)stationAddressEN
+         numberOfRemainingBikes:(int)number
+                           lati:(double)lati
+                          longi:(double)longi
+                      stationID:(NSString *)stationID {
     
-    _name = name;
-    _address = address;
+    _stationNameCH = stationNameCH;
+    _stationNameEN = stationNameEN;
+    _stationAddressCH = stationAddressCH;
+    _stationAddressEN = stationAddressEN;
     _numberOfRemainingBikes = number;
     _lati = lati;
     _longi = longi;
