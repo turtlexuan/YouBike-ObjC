@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2032B8B91EC58C6C0011329F /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 2032B8B81EC58C6C0011329F /* Station.m */; };
+		2032B8BC1EC5A6AD0011329F /* YouBikeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2032B8BB1EC5A6AD0011329F /* YouBikeManager.m */; };
 		2063C8731EC17CCA0099F8FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C8721EC17CCA0099F8FC /* main.m */; };
 		2063C8761EC17CCA0099F8FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2063C8751EC17CCA0099F8FC /* AppDelegate.m */; };
 		2063C87C1EC17CCA0099F8FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2063C87A1EC17CCA0099F8FC /* Main.storyboard */; };
@@ -39,6 +40,8 @@
 		2032B8B51EC55C730011329F /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		2032B8B71EC58C6C0011329F /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Station.h; sourceTree = "<group>"; };
 		2032B8B81EC58C6C0011329F /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Station.m; sourceTree = "<group>"; };
+		2032B8BA1EC5A6AD0011329F /* YouBikeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouBikeManager.h; sourceTree = "<group>"; };
+		2032B8BB1EC5A6AD0011329F /* YouBikeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouBikeManager.m; sourceTree = "<group>"; };
 		2063C86E1EC17CCA0099F8FC /* YouBike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2063C8721EC17CCA0099F8FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2063C8741EC17CCA0099F8FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 			children = (
 				2032B8B71EC58C6C0011329F /* Station.h */,
 				2032B8B81EC58C6C0011329F /* Station.m */,
+				2032B8BA1EC5A6AD0011329F /* YouBikeManager.h */,
+				2032B8BB1EC5A6AD0011329F /* YouBikeManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -331,7 +336,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -344,6 +349,7 @@
 				2063C87F1EC17CCA0099F8FC /* YouBike.xcdatamodeld in Sources */,
 				2063C8BB1EC17CF20099F8FC /* StationCollectionViewCell.m in Sources */,
 				2063C8B11EC17CF20099F8FC /* ProfileViewController.m in Sources */,
+				2032B8BC1EC5A6AD0011329F /* YouBikeManager.m in Sources */,
 				2063C8B61EC17CF20099F8FC /* TabBarViewController.m in Sources */,
 				2063C8B41EC17CF20099F8FC /* StationNavigationController.m in Sources */,
 				2063C8761EC17CCA0099F8FC /* AppDelegate.m in Sources */,

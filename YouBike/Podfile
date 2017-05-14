@@ -9,5 +9,6 @@ target 'YouBike' do
 pod 'FBSDKCoreKit'
 pod 'FBSDKShareKit'
 pod 'FBSDKLoginKit'
+pod 'AFNetworking'
 
 end

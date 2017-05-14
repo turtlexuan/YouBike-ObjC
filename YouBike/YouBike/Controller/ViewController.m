@@ -17,6 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [YouBikeManager.sharedInstance signInWithFacebookWithAccessToken:[FBSDKAccessToken.currentAccessToken tokenString]
+                                               withCompletionHandler:^(NSString * _Nullable token,
+                                                                       NSString * _Nullable tokenType,
+                                                                       NSError * _Nullable error) {
+        
+        NSLog(@"%@", token);
+        NSLog(@"%@", tokenType);
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

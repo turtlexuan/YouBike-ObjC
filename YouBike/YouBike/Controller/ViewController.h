@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YouBikeManager.h"
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 @interface ViewController : UIViewController
 
