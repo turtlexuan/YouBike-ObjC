@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Constants.h"
 
 @interface MapTableViewController : UITableViewController
+
+@property (strong, nonatomic) Station *selectedStation;
+@property (assign, nonatomic) BOOL isFromButton;
 
 @end

@@ -12,14 +12,6 @@
 #import "Station.h"
 @class YouBikeManager;
 
-//protocol YouBikeManagerDelegate: class {
-//    func manager(_ manager: YouBikeManager, didGet stations: [StationMO])
-//
-//    func manager(_ manager: YouBikeManager, didFailWith error: Error)
-//
-//    func manager(_ manager: YouBikeManager, didGet comments: [Comment])
-//}
-
 @protocol YouBikeManagerDelegate <NSObject>
 
 - (void)manager:(YouBikeManager *)manager didGet:(NSArray<Station *> *)stations;
@@ -31,9 +23,10 @@
 
 @property (weak, nonatomic) id<YouBikeManagerDelegate> delegate;
 @property (strong, nonatomic) NSMutableArray<Station *> *stationArray;
+@property (strong, nonatomic) NSString *stationParameter;
 
 + (instancetype)sharedInstance;
-- (void)signInWithFacebookWithAccessToken:(NSString*)accessToken withCompletionHandler:(void (^_Nonnull)(NSString * __nullable token, NSString * __nullable tokenType, NSError * __nullable error))completionHandler;
-- (void)getStationsWithToken:(NSString *__nonnull)token withTokenType:(NSString *__nonnull)tokenType;
+- (void)signInWithFacebookWithAccessToken:(NSString*)accessToken withCompletionHandler:(void (^)(NSString * token, NSString * tokenType, NSError * error))completionHandler;
+- (void)getStations;
 
 @end

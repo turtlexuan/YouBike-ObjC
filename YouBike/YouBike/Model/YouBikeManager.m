@@ -11,10 +11,6 @@
 
 @interface YouBikeManager()
 
-{
-    NSString *stationParameter;
-}
-
 @end
 
 @implementation YouBikeManager
@@ -35,6 +31,7 @@
     self = [super init];
     
     self.stationArray = [[NSMutableArray alloc] init];
+    self.stationParameter = [[NSString alloc] init];
     
     return self;
     
@@ -86,6 +83,9 @@
         
         NSString *token = [data objectForKey:@"token"];
         NSString *tokenType = [data objectForKey:@"tokenType"];
+        
+        [NSUserDefaults.standardUserDefaults setObject:token forKey:@"token"];
+        [NSUserDefaults.standardUserDefaults setObject:tokenType forKey:@"tokenType"];
 
         completionHandler(token, tokenType, nil);
     }];
@@ -94,16 +94,19 @@
     
 }
 
-- (void)getStationsWithToken:(NSString *__nonnull)token withTokenType:(NSString *__nonnull)tokenType {
+- (void)getStations {
 
     NSString *urlString = [NSString stringWithFormat:@"%@%@", URLSTRING_SERVER, URLSTRING_STATION];
+    
+    NSString *token = [NSUserDefaults.standardUserDefaults objectForKey:@"token"];
+    NSString *tokenType = [NSUserDefaults.standardUserDefaults objectForKey:@"tokenType"];
     
     NSString *authString = [NSString stringWithFormat:@"%@ %@", tokenType, token];
     
     NSDictionary *param;
     
-    if (stationParameter != nil) {
-        param = @{@"paging": stationParameter};
+    if (self.stationParameter != nil) {
+        param = @{@"paging": self.stationParameter};
     }
  
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -127,11 +130,13 @@
         NSDictionary *paging = [jsonObject objectForKey:@"paging"];
         NSString *nextPage = [paging objectForKey:@"next"];
         
-        if (paging != nil) {
-            stationParameter = nextPage;
+        if (nextPage != nil) {
+            self.stationParameter = nextPage;
+        } else {
+            self.stationParameter = nil;
         }
         
-        NSLog(@"%@", stationParameter);
+        NSLog(@"%@", self.stationParameter);
 
         for (NSDictionary *station in data) {
             //

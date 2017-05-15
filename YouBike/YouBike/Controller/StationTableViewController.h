@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Constants.h"
 
 @interface StationTableViewController : UITableViewController
+
+@property (strong, nonatomic) NSArray<Station *> *station;
 
 @end

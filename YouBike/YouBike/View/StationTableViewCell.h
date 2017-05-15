@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *remainLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numberLabel;
 @property (weak, nonatomic) IBOutlet UIButton *mapButton;
+@property (weak, nonatomic) IBOutlet UIImageView *markerImageView;
 
 @end

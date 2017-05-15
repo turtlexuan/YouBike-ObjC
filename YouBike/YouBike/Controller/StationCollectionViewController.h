@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Constants.h"
 
 @interface StationCollectionViewController : UICollectionViewController
+
+@property (strong, nonatomic) NSArray<Station *> *station;
 
 @end

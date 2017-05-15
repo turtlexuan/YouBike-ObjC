@@ -29,6 +29,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (instancetype)init {
+    
+    self = [super init];
+    
+    _isFromButton = false;
+    
+    return self;
+    
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

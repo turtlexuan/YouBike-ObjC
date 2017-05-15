@@ -9,8 +9,13 @@
 #ifndef Constants_h
 #define Constants_h
 
+#import "Station.h"
 #import "StationTableViewController.h"
 #import "StationCollectionViewController.h"
+#import "StationTableViewCell.h"
+#import "StationCollectionViewCell.h"
+#import "MapTableViewController.h"
+#import "YouBikeManager.h"
 
 
 #endif /* Constants_h */

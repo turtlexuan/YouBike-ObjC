@@ -160,6 +160,8 @@
 		2063C88B1EC17CF20099F8FC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2063C8A01EC17CF20099F8FC /* ViewController.h */,
+				2063C8A11EC17CF20099F8FC /* ViewController.m */,
 				2063C88C1EC17CF20099F8FC /* LoginViewController.h */,
 				2063C88D1EC17CF20099F8FC /* LoginViewController.m */,
 				2063C88E1EC17CF20099F8FC /* MapNavigationController.h */,
@@ -180,8 +182,6 @@
 				2063C89D1EC17CF20099F8FC /* StationTableViewController.m */,
 				2063C89E1EC17CF20099F8FC /* TabBarViewController.h */,
 				2063C89F1EC17CF20099F8FC /* TabBarViewController.m */,
-				2063C8A01EC17CF20099F8FC /* ViewController.h */,
-				2063C8A11EC17CF20099F8FC /* ViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

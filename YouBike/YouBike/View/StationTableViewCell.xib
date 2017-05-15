@@ -17,23 +17,24 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Utv-Wd-Wsr" id="IgJ-Uv-XMB">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconMarker" translatesAutoresizingMaskIntoConstraints="NO" id="hXB-30-5S1">
-                        <rect key="frame" x="20" y="9" width="16" height="16"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-marker" translatesAutoresizingMaskIntoConstraints="NO" id="hXB-30-5S1">
+                        <rect key="frame" x="20" y="9" width="30" height="30"/>
+                        <color key="tintColor" red="1" green="0.43137254899999999" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="hXB-30-5S1" secondAttribute="height" multiplier="1:1" id="Bor-it-TyA"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="信義區 / 捷運市政府站(3號出口)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="TMT-6H-Kzm">
-                        <rect key="frame" x="44" y="10" width="311" height="28"/>
+                        <rect key="frame" x="58" y="10" width="297" height="28"/>
                         <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="20"/>
                         <color key="textColor" red="0.62745098040000002" green="0.38431372549999998" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="忠孝東路四段/光復南路(東南側)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="WLZ-LJ-YYX">
-                        <rect key="frame" x="20" y="30" width="201" height="17"/>
+                        <rect key="frame" x="20" y="44" width="201" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.82745098039999998" green="0.58823529409999997" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -104,6 +105,7 @@
                 <outlet property="addressLabel" destination="WLZ-LJ-YYX" id="uaX-mR-DXZ"/>
                 <outlet property="bikesLabel" destination="Ca1-9P-8Cx" id="YPn-FR-fHZ"/>
                 <outlet property="mapButton" destination="Inj-lN-Zi8" id="w9B-mL-r4Q"/>
+                <outlet property="markerImageView" destination="hXB-30-5S1" id="wgN-1o-e5Q"/>
                 <outlet property="nameLabel" destination="TMT-6H-Kzm" id="D39-Vu-Qd3"/>
                 <outlet property="numberLabel" destination="5Ux-te-aDj" id="XGf-wP-oIn"/>
                 <outlet property="remainLabel" destination="C46-2r-u6T" id="TkD-G5-U3e"/>
@@ -111,6 +113,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="iconMarker" width="16" height="16"/>
+        <image name="icon-marker" width="30" height="30"/>
     </resources>
 </document>
