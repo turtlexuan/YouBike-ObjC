@@ -95,8 +95,8 @@
         MVC.selectedStation = selectedStation;
         MVC.isFromButton = false;
         
+        MVC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:MVC animated:true];
-        self.navigationController.hidesBottomBarWhenPushed = true;
         
     }
     
@@ -125,8 +125,8 @@
     MVC.selectedStation = selectedStation;
     MVC.isFromButton = true;
     
+    MVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:MVC animated:true];
-    self.navigationController.hidesBottomBarWhenPushed = true;
     
 }
 

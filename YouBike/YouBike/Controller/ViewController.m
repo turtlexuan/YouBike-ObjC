@@ -23,6 +23,7 @@
     // Do any additional setup after loading the view.
     [self setUpSegmentControl];
     [self.navigationController setNavigationBarHidden:false animated:true];
+    self.navigationController.navigationBar.translucent = false;
     
     YouBikeManager.sharedInstance.delegate = self;
     
@@ -80,8 +81,8 @@
     
     [self.view addSubview:viewController.view];
     
-    viewController.view.frame = self.view.frame;
-    [viewController.view setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+    viewController.view.frame = self.view.bounds;
+//    [viewController.view setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
     
     [viewController didMoveToParentViewController:self];
     
@@ -142,8 +143,6 @@
 
 #pragma mark - YouBikeManagerDelegate
 - (void)manager:(YouBikeManager *)manager didGet:(NSArray<Station *> *)stations {
-    
-//    NSLog(@"%@", stations);
     
     self.stationTableViewController.station = stations;
     self.stationCollectionViewController.station = stations;

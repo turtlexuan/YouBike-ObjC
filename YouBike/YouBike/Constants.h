@@ -10,12 +10,16 @@
 #define Constants_h
 
 #import "Station.h"
+#import "Comment.h"
 #import "StationTableViewController.h"
 #import "StationCollectionViewController.h"
 #import "StationTableViewCell.h"
 #import "StationCollectionViewCell.h"
+#import "SegmentTableViewCell.h"
+#import "CommentTableViewCell.h"
 #import "MapTableViewController.h"
 #import "YouBikeManager.h"
+#import "LocationManager.h"
 
 
 #endif /* Constants_h */

@@ -19,13 +19,10 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
+    [self.collectionView registerNib:[UINib nibWithNibName:@"StationCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"CollectionCell"];
+    self.collectionView.collectionViewLayout = [self setUpFlowLayout];
+    self.collectionView.backgroundColor = [UIColor colorWithRed:166/255.0 green:145/255.0 blue:84/255.0 alpha:1];
     
-    // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,66 +30,88 @@ static NSString * const reuseIdentifier = @"Cell";
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Helper Method
+- (UICollectionViewFlowLayout *)setUpFlowLayout {
+    
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    
+    layout.sectionInset = UIEdgeInsetsMake(14, 14, 14, 14);
+    layout.minimumLineSpacing = 14;
+    
+    if ([UIDevice.currentDevice.model  isEqual: @"iPad"]) {
+        layout.itemSize = CGSizeMake(140, 140);
+    } else {
+        layout.itemSize = CGSizeMake((self.view.frame.size.width - 42) / 2, (self.view.frame.size.width - 42) / 2);
+    }
+    
+    return layout;
+    
 }
-*/
 
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
+    
+    NSLog(@"Station Count: %lu", (unsigned long)self.station.count);
+
+    return self.station.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    StationCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionCell" forIndexPath:indexPath];
     
-    // Configure the cell
+    cell.nameLabel.text = self.station[indexPath.row].stationNameCH;
+    cell.numberLabel.text = [NSString stringWithFormat:@"%d", self.station[indexPath.row].numberOfRemainingBikes];
     
     return cell;
 }
 
 #pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Station *selectedStation = self.station[indexPath.row];
+    
+    if (self.splitViewController != nil) {
+        
+        UIStoryboard *iPadStoryboard = [UIStoryboard storyboardWithName:@"StoryboardiPad" bundle:nil];
+        
+        MapTableViewController *MVC = [iPadStoryboard instantiateViewControllerWithIdentifier:@"MapTableViewController"];
+        
+        UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:MVC];
+        
+        MVC.selectedStation = selectedStation;
+        MVC.isFromButton = false;
+        
+        [self.splitViewController showDetailViewController:navigation sender:nil];
+        
+    } else {
+        
+        MapTableViewController *MVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MapTableViewController"];
+        
+        MVC.selectedStation = selectedStation;
+        MVC.isFromButton = false;
+        
+        [self.navigationController pushViewController:MVC animated:true];
+        self.navigationController.hidesBottomBarWhenPushed = true;
+        
+    }
+    
 }
-*/
 
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSInteger lastElement = self.station.count - 1;
+    
+    if (indexPath.row == lastElement && YouBikeManager.sharedInstance.stationParameter != nil) {
+        [YouBikeManager.sharedInstance getStations];
+    }
+    
 }
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end

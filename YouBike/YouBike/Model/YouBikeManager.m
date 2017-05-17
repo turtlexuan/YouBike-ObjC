@@ -31,7 +31,9 @@
     self = [super init];
     
     self.stationArray = [[NSMutableArray alloc] init];
+    self.commentArray = [[NSMutableArray alloc] init];
     self.stationParameter = [[NSString alloc] init];
+    self.commentParameter = [[NSString alloc] init];
     
     return self;
     
@@ -172,7 +174,77 @@
     
 }
 
+- (void)getCommentWithID:(NSString *)stationID withCompletionHandler:(void (^__nonnull)(NSMutableArray<Comment *> * __nullable comments,
+                                                                                        NSError * __nullable error))completionHandler {
+    
+    NSString *url = [NSString stringWithFormat:@"%@%@/%@%@", URLSTRING_SERVER, URLSTRING_STATION, stationID, URLSTRING_COMMENT];
+    
+    NSString *token = [NSUserDefaults.standardUserDefaults objectForKey:@"token"];
+    NSString *tokenType = [NSUserDefaults.standardUserDefaults objectForKey:@"tokenType"];
+    
+    NSString *authString = [NSString stringWithFormat:@"%@ %@", tokenType, token];
 
+    NSDictionary *param;
+    
+    if (self.commentParameter != nil) {
+        param = @{@"paging": self.commentParameter};
+    }
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    [manager.requestSerializer setValue:authString forHTTPHeaderField:@"Authorization"];
+    
+    [manager GET:url parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+
+        NSDictionary *jsonObject = (NSDictionary *)responseObject;
+        
+        if (jsonObject == nil) {
+            return;
+        }
+        
+        NSDictionary *data = [jsonObject objectForKey:@"data"];
+        
+        if (data == nil) {
+            return;
+        }
+        
+        NSDictionary *paging = [jsonObject objectForKey:@"paging"];
+        NSString *nextPage = [paging objectForKey:@"next"];
+        
+        if (nextPage != nil) {
+            self.commentParameter = nextPage;
+        } else {
+            self.commentParameter = nil;
+        }
+        
+        for (NSDictionary *comment in data) {
+            
+            NSDictionary *userData = [comment objectForKey:@"user"];
+            NSString *text = [comment objectForKey:@"text"];
+            NSString *time = [comment objectForKey:@"created"];
+            
+            if (userData == nil) {
+                continue;
+            }
+            
+            NSString *username = [userData objectForKey:@"name"];
+            NSString *pictureUrl = [userData objectForKey:@"picture"];
+            
+            Comment *comments = [[Comment alloc] initWithUsername:username userPictureUrl:pictureUrl time:time text:text];
+            
+            [self.commentArray addObject:comments];
+        }
+        
+        completionHandler(self.commentArray, nil);
+
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        //
+        NSLog(@"%@", error);
+        completionHandler(nil, error);
+    }];
+    
+    
+}
 
 
 
