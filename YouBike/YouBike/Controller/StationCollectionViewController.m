@@ -97,8 +97,8 @@ static NSString * const reuseIdentifier = @"Cell";
         MVC.selectedStation = selectedStation;
         MVC.isFromButton = false;
         
+        MVC.hidesBottomBarWhenPushed = true;
         [self.navigationController pushViewController:MVC animated:true];
-        self.navigationController.hidesBottomBarWhenPushed = true;
         
     }
     

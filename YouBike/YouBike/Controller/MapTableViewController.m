@@ -291,6 +291,22 @@ typedef NS_ENUM(NSInteger, Components) {
     return [[UITableViewCell alloc] init];
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSInteger lastElement = self.comments.count - 1;
+    
+    if (indexPath.row == lastElement && YouBikeManager.sharedInstance.commentParameter != nil) {
+        [YouBikeManager.sharedInstance getCommentWithID:self.selectedStation.stationID withCompletionHandler:^(NSMutableArray<Comment *> * _Nullable comments, NSError * _Nullable error) {
+            
+            self.comments = comments;
+            
+            [self.tableView reloadData];
+
+        }];
+    }
+    
+}
+
 #pragma mark - CLLocationManagerDelegate
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
     
