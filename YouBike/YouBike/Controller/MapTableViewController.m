@@ -103,7 +103,7 @@ typedef NS_ENUM(NSInteger, Components) {
 
 - (void)setUp {
     
-    [self.navigationItem setTitle:self.selectedStation.stationNameCH];
+    [self.navigationItem setTitle:self.selectedStation.stationName];
     self.navigationController.hidesBottomBarWhenPushed = true;
     
     if (self.isFromButton) {
@@ -223,9 +223,9 @@ typedef NS_ENUM(NSInteger, Components) {
         
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
         
-        cell.nameLabel.text = self.selectedStation.stationNameCH;
-        cell.addressLabel.text = self.selectedStation.stationAddressCH;
-        cell.numberLabel.text = [NSString stringWithFormat:@"%d", self.selectedStation.numberOfRemainingBikes];
+        cell.nameLabel.text = self.selectedStation.stationName;
+        cell.addressLabel.text = self.selectedStation.stationAddress;
+        cell.numberLabel.text = [NSString stringWithFormat:@"%lld", self.selectedStation.numberOfRemainingBikes];
         [cell.mapButton setHidden:true];
         cell.markerImageView.image = [cell.markerImageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         cell.markerImageView.tintColor = [UIColor colorWithRed:160/255.0 green:98/255.0 blue:90/255.0 alpha:1];

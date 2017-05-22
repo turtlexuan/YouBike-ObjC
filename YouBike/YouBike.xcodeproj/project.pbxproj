@@ -275,7 +275,7 @@
 				TargetAttributes = {
 					2063C86D1EC17CCA0099F8FC = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = U9WVFKNWBQ;
+						DevelopmentTeam = D3SFCFQ6Q5;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -518,7 +518,7 @@
 			baseConfigurationReference = 8F482465F4FB58E838E9C096 /* Pods-YouBike.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = U9WVFKNWBQ;
+				DEVELOPMENT_TEAM = D3SFCFQ6Q5;
 				INFOPLIST_FILE = YouBike/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.turtlexuan.YouBike;
@@ -531,7 +531,7 @@
 			baseConfigurationReference = 9BA5818494562274EA31FFE6 /* Pods-YouBike.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = U9WVFKNWBQ;
+				DEVELOPMENT_TEAM = D3SFCFQ6Q5;
 				INFOPLIST_FILE = YouBike/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.turtlexuan.YouBike;

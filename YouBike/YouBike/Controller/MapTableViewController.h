@@ -10,10 +10,12 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "Constants.h"
+#import "StationMO+CoreDataClass.h"
+#import "StationMO+CoreDataProperties.h"
 
 @interface MapTableViewController : UITableViewController
 
-@property (strong, nonatomic) Station *selectedStation;
+@property (strong, nonatomic) StationMO *selectedStation;
 @property (assign, nonatomic) BOOL isFromButton;
 
 @end

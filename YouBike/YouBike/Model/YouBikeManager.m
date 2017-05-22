@@ -8,6 +8,7 @@
 
 #import "YouBikeManager.h"
 #import "ViewController.h"
+#import "AppDelegate.h"
 
 @interface YouBikeManager()
 
@@ -60,9 +61,10 @@
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
-    NSURLSessionDataTask *task = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response,
-                                                                                         id  _Nullable responseObject,
-                                                                                         NSError * _Nullable error) {
+    NSURLSessionDataTask *task = [manager dataTaskWithRequest:request
+                                            completionHandler:^(NSURLResponse * _Nonnull response,
+                                                                id  _Nullable responseObject,
+                                                                NSError * _Nullable error) {
         if (error != nil) {
             
             NSLog(@"%@", error);
@@ -154,10 +156,27 @@
             int remainBikeValue = [remainBikes intValue];
             double latiValue = [lati doubleValue];
             double longiValue = [longi doubleValue];
+            
+            AppDelegate *appDelegate = (AppDelegate *)UIApplication.sharedApplication.delegate;
+            NSManagedObjectContext *context = appDelegate.persistentContainer.viewContext;
+            StationMO *station = [[StationMO alloc] initWithContext:context];
+            if ([NSLocale.preferredLanguages.firstObject isEqual:@"zh-Hant-US"]) {
+                station.stationName = stationNameCH;
+                station.stationAddress = stationAddressCH;
+            } else {
+                station.stationName = stationNameEN;
+                station.stationAddress = stationAddressEN;
+            }
+            NSLog(@"%@", NSLocale.preferredLanguages.firstObject);
+            station.numberOfRemainingBikes = remainBikeValue;
+            station.lati = latiValue;
+            station.longi = longiValue;
+            station.stationID = stationID;
+            [appDelegate saveContext];
 
             Station *oneStation = [[Station alloc] initWithNameCH:stationNameCH nameEN:stationNameEN addressCH:stationAddressCH addressEN:stationAddressEN numberOfRemainingBikes:remainBikeValue lati:latiValue longi:longiValue stationID:stationID];
             
-            [self.stationArray addObject:oneStation];
+            [self.stationArray addObject:station];
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{

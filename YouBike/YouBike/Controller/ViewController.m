@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -27,19 +28,33 @@
     
     YouBikeManager.sharedInstance.delegate = self;
     
-    [YouBikeManager.sharedInstance signInWithFacebookWithAccessToken:[FBSDKAccessToken.currentAccessToken tokenString]
-                                               withCompletionHandler:^(NSString * _Nullable token,
-                                                                       NSString * _Nullable tokenType,
-                                                                       NSError * _Nullable error) {
+    if ([[Reachability reachabilityForInternetConnection] currentReachabilityStatus] == NotReachable) {
         
-        NSLog(@"%@", token);
-        NSLog(@"%@", tokenType);
+        [self fetchData];
+        
+    } else {
+        
+        [self deleteData];
+    
+        [YouBikeManager.sharedInstance signInWithFacebookWithAccessToken:[FBSDKAccessToken.currentAccessToken tokenString]
+                                                   withCompletionHandler:^(NSString * _Nullable token,
+                                                                           NSString * _Nullable tokenType,
+                                                                           NSError * _Nullable error) {
+        
+            NSLog(@"%@", token);
+            NSLog(@"%@", tokenType);
                                                    
-        [YouBikeManager.sharedInstance getStations];
+            [YouBikeManager.sharedInstance getStations];
         
     }];
+        
+    }
     
     [self updateView];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 #pragma mark - Initializer
@@ -82,7 +97,6 @@
     [self.view addSubview:viewController.view];
     
     viewController.view.frame = self.view.bounds;
-//    [viewController.view setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
     
     [viewController didMoveToParentViewController:self];
     
@@ -141,8 +155,56 @@
     
 }
 
+- (void)fetchData {
+    
+    NSFetchRequest *fetchRequest = [StationMO fetchRequest];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"stationID" ascending:true];
+    fetchRequest.sortDescriptors = @[sortDescriptor];
+    
+    AppDelegate *appDelegate = (AppDelegate *)UIApplication.sharedApplication.delegate;
+    
+    if (appDelegate == nil) {
+        return;
+    }
+    
+    NSManagedObjectContext *context = appDelegate.persistentContainer.viewContext;
+    
+    NSError * _Nullable __autoreleasing * _Nullable error = NULL;
+    
+    NSArray<StationMO *> *fetchedObjects = [context executeFetchRequest:fetchRequest error:error];
+    
+    self.stationTableViewController.station = fetchedObjects;
+    self.stationCollectionViewController.station = fetchedObjects;
+
+}
+
+- (void)deleteData {
+    
+    NSFetchRequest *fetchRequest = [StationMO fetchRequest];
+    
+    AppDelegate *appDelegate = (AppDelegate *)UIApplication.sharedApplication.delegate;
+    
+    if (appDelegate == nil) {
+        return;
+    }
+    
+    NSManagedObjectContext *context = appDelegate.persistentContainer.viewContext;
+
+    NSError * _Nullable __autoreleasing * _Nullable error = NULL;
+    
+    NSArray<StationMO *> *fetchedObjects = [context executeFetchRequest:fetchRequest error:error];
+    
+    for (StationMO *object in fetchedObjects) {
+        
+        NSManagedObject *managedObject = object;
+        [context deleteObject:managedObject];
+        
+    }
+    
+}
+
 #pragma mark - YouBikeManagerDelegate
-- (void)manager:(YouBikeManager *)manager didGet:(NSArray<Station *> *)stations {
+- (void)manager:(YouBikeManager *)manager didGet:(NSArray<StationMO *> *)stations {
     
     self.stationTableViewController.station = stations;
     self.stationCollectionViewController.station = stations;

@@ -66,8 +66,8 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     StationCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionCell" forIndexPath:indexPath];
     
-    cell.nameLabel.text = self.station[indexPath.row].stationNameCH;
-    cell.numberLabel.text = [NSString stringWithFormat:@"%d", self.station[indexPath.row].numberOfRemainingBikes];
+    cell.nameLabel.text = self.station[indexPath.row].stationName;
+    cell.numberLabel.text = [NSString stringWithFormat:@"%lld", self.station[indexPath.row].numberOfRemainingBikes];
     
     return cell;
 }
@@ -75,7 +75,7 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDelegate>
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    Station *selectedStation = self.station[indexPath.row];
+    StationMO *selectedStation = self.station[indexPath.row];
     
     if (self.splitViewController != nil) {
         

@@ -21,7 +21,6 @@
 #import "YouBikeManager.h"
 #import "LocationManager.h"
 
-
 #endif /* Constants_h */
 
 /* FBLogin */

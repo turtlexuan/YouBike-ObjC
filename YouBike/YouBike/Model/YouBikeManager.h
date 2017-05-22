@@ -11,11 +11,14 @@
 #import <AFNetworking/AFNetworking.h>
 #import "Station.h"
 #import "Comment.h"
+#import "StationMO+CoreDataClass.h"
+#import "StationMO+CoreDataProperties.h"
+
 @class YouBikeManager;
 
 @protocol YouBikeManagerDelegate <NSObject>
 
-- (void)manager:(YouBikeManager *)manager didGet:(NSArray<Station *> *)stations;
+- (void)manager:(YouBikeManager *)manager didGet:(NSArray<StationMO *> *)stations;
 - (void)manager:(YouBikeManager *)manager didFailWith:(NSError *)error;
 
 @end
@@ -23,7 +26,7 @@
 @interface YouBikeManager : NSObject
 
 @property (weak, nonatomic) id<YouBikeManagerDelegate> delegate;
-@property (strong, nonatomic) NSMutableArray<Station *> *stationArray;
+@property (strong, nonatomic) NSMutableArray<StationMO *> *stationArray;
 @property (strong, nonatomic) NSMutableArray<Comment *> *commentArray;
 @property (strong, nonatomic) NSString *stationParameter;
 @property (strong, nonatomic) NSString *commentParameter;

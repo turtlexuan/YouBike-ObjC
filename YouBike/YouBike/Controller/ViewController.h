@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import "YouBikeManager.h"
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import "Constants.h"
+#import <Reachability/Reachability.h>
+#import "StationMO+CoreDataClass.h"
+#import "StationMO+CoreDataProperties.h"
 
 @interface ViewController : UIViewController <YouBikeManagerDelegate>
 

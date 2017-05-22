@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Constants.h"
+#import "StationMO+CoreDataClass.h"
+#import "StationMO+CoreDataProperties.h"
 
 @interface StationTableViewController : UITableViewController
 
-@property (strong, nonatomic) NSArray<Station *> *station;
+@property (strong, nonatomic) NSArray<StationMO *> *station;
 
 @end

@@ -10,5 +10,6 @@ pod 'FBSDKCoreKit'
 pod 'FBSDKShareKit'
 pod 'FBSDKLoginKit'
 pod 'AFNetworking'
+pod 'Reachability'
 
 end

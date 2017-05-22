@@ -44,9 +44,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     StationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    cell.nameLabel.text = self.station[indexPath.row].stationNameCH;
-    cell.addressLabel.text = self.station[indexPath.row].stationAddressCH;
-    cell.numberLabel.text = [NSString stringWithFormat:@"%d", self.station[indexPath.row].numberOfRemainingBikes];
+    cell.nameLabel.text = self.station[indexPath.row].stationName;
+    cell.addressLabel.text = self.station[indexPath.row].stationAddress;
+    cell.numberLabel.text = [NSString stringWithFormat:@"%lld", self.station[indexPath.row].numberOfRemainingBikes];
     cell.remainLabel.text = NSLocalizedString(@"剩", @"");
     cell.bikesLabel.text = NSLocalizedString(@"台", @"");
     
@@ -73,7 +73,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    Station *selectedStation = self.station[indexPath.row];
+    StationMO *selectedStation = self.station[indexPath.row];
     
     if (self.splitViewController != nil) {
         
@@ -118,7 +118,7 @@
     StationTableViewCell *cell = (StationTableViewCell *)sender.superview.superview;
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     
-    Station *selectedStation = self.station[indexPath.row];
+    StationMO *selectedStation = self.station[indexPath.row];
     
     MapTableViewController *MVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MapTableViewController"];
     
