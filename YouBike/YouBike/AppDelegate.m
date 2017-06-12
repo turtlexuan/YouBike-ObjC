@@ -18,6 +18,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
     navigationBarAppearance.barTintColor = [UIColor colorWithRed: 61/255.0 green: 52/255.0 blue: 66/255.0 alpha: 1];
     [navigationBarAppearance setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor colorWithRed:251/255.0 green:197/255.0 blue:111/255.0 alpha:1]}];
@@ -26,7 +28,27 @@
     tabBarAppearance.tintColor = [UIColor colorWithRed:251/255.0 green:197/255.0 blue:111/255.0 alpha:1];
     tabBarAppearance.barTintColor = [UIColor colorWithRed: 61/255.0 green: 52/255.0 blue: 66/255.0 alpha: 1];
     
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
+    
+    if ([FBSDKAccessToken currentAccessToken] == nil) {
+        
+        UINavigationController *loginVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"loginNavigationController"];
+        self.window.rootViewController = loginVC;
+        
+        return YES;
+        
+    }
+    
+    
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    
+    return [FBSDKApplicationDelegate.sharedInstance application:app openURL:url options:options];
+    
 }
 
 
@@ -49,6 +71,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [FBSDKAppEvents activateApp];
 }
 
 

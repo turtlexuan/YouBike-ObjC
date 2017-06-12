@@ -7,8 +7,12 @@
 //
 
 #import "SplitViewController.h"
+#import "ViewController.h"
+#import "ProfileNavigationController.h"
 
 @interface SplitViewController ()
+
+@property (strong, nonatomic) ViewController *viewController;
 
 @end
 
@@ -16,12 +20,41 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.preferredDisplayMode = UISplitViewControllerDisplayModeAllVisible;
+    
+    self.viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"tab-bar-profile"]
+                                                                              landscapeImagePhone:nil
+                                                                                            style:UIBarButtonItemStylePlain
+                                                                                           target:self
+                                                                                           action:@selector(showProfile)];
+    self.viewController.navigationItem.leftBarButtonItem.tintColor = [UIColor colorWithRed:251/255.0 green:197/255.0 blue:111/255.0 alpha:1];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (ViewController *)viewController {
+    
+    UINavigationController *navigationController = self.viewControllers.firstObject;
+    
+    return (ViewController *)navigationController.viewControllers.firstObject;
+    
+}
+
+- (void)showProfile:(UIBarButtonItem *)sender {
+    
+    ProfileViewController *profileViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"ProfileViewController"];
+    
+    ProfileNavigationController *navigationController = [[ProfileNavigationController alloc] initWithRootViewController:profileViewController];
+    
+    navigationController.modalPresentationStyle = UIModalPresentationPopover;
+    navigationController.preferredContentSize = CGSizeMake(320, 320);
+    navigationController.popoverPresentationController.barButtonItem = sender;
+    
 }
 
 /*
