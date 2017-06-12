@@ -45,6 +45,12 @@
                                                              NSString * __nullable tokenType,
                                                              NSError * __nullable error))completionHandler {
     
+    NSURLSessionDataTask *task2 = [[NSURLSessionDataTask alloc] init];
+    
+//    if (task2.state == NSURLSessionTaskStateRunning) {
+//        [task2 cancel];
+//    }
+    
     NSString *urlString = [NSString stringWithFormat:@"%@%@", URLSTRING_SERVER, URLSTRING_LOGIN];
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
@@ -173,8 +179,6 @@
             station.longi = longiValue;
             station.stationID = stationID;
             [appDelegate saveContext];
-
-            Station *oneStation = [[Station alloc] initWithNameCH:stationNameCH nameEN:stationNameEN addressCH:stationAddressCH addressEN:stationAddressEN numberOfRemainingBikes:remainBikeValue lati:latiValue longi:longiValue stationID:stationID];
             
             [self.stationArray addObject:station];
         }

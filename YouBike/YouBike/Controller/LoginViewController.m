@@ -119,7 +119,7 @@
     
     if ([deviceType isEqual: @"iPad"]) {
         
-        UIViewController *splitVC = [iPadStoryboard instantiateViewControllerWithIdentifier:@"SplitViewController"];
+        UISplitViewController *splitVC = [iPadStoryboard instantiateViewControllerWithIdentifier:@"SplitViewController"];
         UIApplication.sharedApplication.keyWindow.rootViewController = splitVC;
         
     } else {

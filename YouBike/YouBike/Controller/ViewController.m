@@ -44,7 +44,7 @@
             NSLog(@"%@", token);
             NSLog(@"%@", tokenType);
                                                    
-            [YouBikeManager.sharedInstance getStations];
+            [[YouBikeManager sharedInstance] getStations];
         
     }];
         

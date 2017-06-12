@@ -20,6 +20,7 @@
 #import "MapTableViewController.h"
 #import "YouBikeManager.h"
 #import "LocationManager.h"
+#import "ProfileViewController.h"
 
 #endif /* Constants_h */
 
